@@ -1,3 +1,4 @@
+import { html } from "lit";
 import { Template } from "./template";
 
 /**
@@ -54,10 +55,24 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+const chromaticKitchenSink = (args) => html`
+	<div style="display: grid; justify-content: start; gap: 2rem;">
+		${Template(args)}
+		${Template({
+			...args,
+			size: "s"
+		})}
+	</div>
+`;
 
-export const Vertical = Template.bind({});
+export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
+
+export const Vertical = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Vertical.args = {
 	vertical: true,
 };
+
+// export const Default = Template.bind({});
+// Default.args = {};
+
+// export const Vertical = Template.bind({});
