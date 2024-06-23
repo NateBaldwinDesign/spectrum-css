@@ -4,6 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 
@@ -18,6 +19,7 @@ export const Template = ({
 	isDisabled,
 	isRequired,
 	customStyles = {},
+	staticColor,
 	...globals
 }, context) => {
 	if (!label) {
@@ -47,6 +49,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${alignment}`]: typeof alignment !== "undefined",
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
