@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
+import { ColorHandleGroup } from "./colorhandle.test";
 import { Template } from "./template";
 
 /**
@@ -36,7 +37,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ColorHandleGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
@@ -65,7 +66,7 @@ WithColorLoupe.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorHandleGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
