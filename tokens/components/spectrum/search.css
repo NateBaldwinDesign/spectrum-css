@@ -12,19 +12,19 @@
  */
 
 .spectrum {
-	--system-spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-	--system-spectrum-search-border-color-default: var(--spectrum-gray-500);
-	--system-spectrum-search-border-color-hover: var(--spectrum-gray-600);
-	--system-spectrum-search-border-color-focus: var(--spectrum-gray-800);
-	--system-spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
-	--system-spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
-	--system-spectrum-search-sizes-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-search-sizes-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
-	--system-spectrum-search-sizem-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-search-sizem-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-	--system-spectrum-search-sizel-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-search-sizel-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
-	--system-spectrum-search-sizexl-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-search-sizexl-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
+	--system-search-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+	--system-search-border-color-default: var(--spectrum-gray-500);
+	--system-search-border-color-hover: var(--spectrum-gray-600);
+	--system-search-border-color-focus: var(--spectrum-gray-800);
+	--system-search-border-color-focus-hover: var(--spectrum-gray-900);
+	--system-search-border-color-key-focus: var(--spectrum-gray-900);
+	--system-search-size-s-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-size-s-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
+	--system-search-size-m-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-size-m-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+	--system-search-size-l-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-size-l-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
+	--system-search-size-xl-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-size-xl-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
 }

@@ -12,5 +12,5 @@
  */
 
 .spectrum {
-	--system-spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
+	--system-date-picker-initial-height: var(--spectrum-component-height-100);
 }

@@ -12,17 +12,17 @@
  */
 
 .spectrum {
-	--system-spectrum-picker-background-color-default: var(--spectrum-gray-75);
-	--system-spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
-	--system-spectrum-picker-background-color-active: var(--spectrum-gray-300);
-	--system-spectrum-picker-background-color-hover: var(--spectrum-gray-200);
-	--system-spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
-	--system-spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
-	--system-spectrum-picker-border-color-default: var(--spectrum-gray-500);
-	--system-spectrum-picker-border-color-default-open: var(--spectrum-gray-500);
-	--system-spectrum-picker-border-color-hover: var(--spectrum-gray-600);
-	--system-spectrum-picker-border-color-hover-open: var(--spectrum-gray-600);
-	--system-spectrum-picker-border-color-active: var(--spectrum-gray-700);
-	--system-spectrum-picker-border-color-key-focus: var(--spectrum-gray-600);
-	--system-spectrum-picker-border-width: var(--spectrum-border-width-100);
+	--system-picker-background-color-default: var(--spectrum-gray-75);
+	--system-picker-background-color-default-open: var(--spectrum-gray-200);
+	--system-picker-background-color-active: var(--spectrum-gray-300);
+	--system-picker-background-color-hover: var(--spectrum-gray-200);
+	--system-picker-background-color-hover-open: var(--spectrum-gray-200);
+	--system-picker-background-color-key-focus: var(--spectrum-gray-200);
+	--system-picker-border-color-default: var(--spectrum-gray-500);
+	--system-picker-border-color-default-open: var(--spectrum-gray-500);
+	--system-picker-border-color-hover: var(--spectrum-gray-600);
+	--system-picker-border-color-hover-open: var(--spectrum-gray-600);
+	--system-picker-border-color-active: var(--spectrum-gray-700);
+	--system-picker-border-color-key-focus: var(--spectrum-gray-600);
+	--system-picker-border-width: var(--spectrum-border-width-100);
 }

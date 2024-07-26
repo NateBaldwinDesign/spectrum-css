@@ -12,10 +12,10 @@
  */
 
 .spectrum--express {
-	--system-spectrum-textfield-border-color: var(--spectrum-gray-400);
-	--system-spectrum-textfield-border-color-hover: var(--spectrum-gray-500);
-	--system-spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
-	--system-spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
-	--system-spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
-	--system-spectrum-textfield-border-width: var(--spectrum-border-width-200);
+	--system-textfield-border-color: var(--spectrum-gray-400);
+	--system-textfield-border-color-hover: var(--spectrum-gray-500);
+	--system-textfield-border-color-focus: var(--spectrum-gray-800);
+	--system-textfield-border-color-focus-hover: var(--spectrum-gray-900);
+	--system-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+	--system-textfield-border-width: var(--spectrum-border-width-200);
 }

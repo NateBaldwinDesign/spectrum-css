@@ -17,20 +17,19 @@ module.exports = ({
 	file,
 	cwd,
 	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-		// @todo strip out all but the references to --system- variables
-		// NOT --system- definitions, only references
-		referencesOnly: false,
-	},
 	combine = false,
-	lint = true,
+	skipMapping,
+	preserveVariables,
+	referencesOnly,
+	stripLocalSelectors,
+	lint = false,
 	verbose = true,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
+	const isProduction = env.toLowerCase() === "production";
+
 	const rootPath = __dirname;
 	const outputFilepath = to ?? file;
 	const relativePath = outputFilepath?.replace(rootPath, "");
@@ -38,45 +37,18 @@ module.exports = ({
 	const pathParts = relativePath?.split(sep) ?? [];
 
 	const isBridge = pathParts.includes("bridge");
-	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
-	const isExpress = outputFilename === "express" || pathParts.includes("express");
+	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename?.includes("index-theme");
+	const isExpress = outputFilename?.includes("express") || pathParts.includes("express");
+	const isStorybook = cwd && cwd.includes(".storybook");
 
-	if (env === "development" && !options.map) {
+	if (!isProduction && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
 
-	if (isTheme) {
-		splitinatorOptions.noSelectors = true;
-	}
-
-	if (isExpress) {
-		combine = true;
-	}
-
-	if (outputFilename === "index-base") {
-		splitinatorOptions.noFlatVariables = true;
-	}
-
-	if (isBridge) {
-		splitinatorOptions.referencesOnly = true;
-	}
-
-	/*
-		This deconstruction has to do with how options are passed
-		to the postcss config via storybook
-	*/
-	if (cwd && cwd.endsWith(".storybook")) {
-		additionalPlugins = {
-			...additionalPlugins,
-			"postcss-pseudo-classes": {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-				allCombinations: true,
-				preserveBeforeAfter: false,
-				prefix: "is-"
-			},
-		};
-	}
+	if (isTheme) stripLocalSelectors = true;
+	if (isExpress) combine = true;
+	if (isBridge) referencesOnly = true;
 
 	return {
 		...options,
@@ -89,12 +61,21 @@ module.exports = ({
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-hover-media-feature": {},
+			// Automatically adds an is-prefixed class for pseudo-classes like :hover, :focus, :active, and :disabled
+			"postcss-pseudo-classes": isStorybook ? {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
+			"postcss-add-theming-layer": {
+				selectorPrefix: "spectrum",
+				skipMapping,
+				preserveVariables,
+				referencesOnly,
+				stripLocalSelectors,
 			},
 			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
@@ -118,7 +99,6 @@ module.exports = ({
 					"color-functional-notation": true,
 					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
-					// "focus-visible-pseudo-class": true,
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
@@ -144,6 +124,8 @@ module.exports = ({
 			},
 			"postcss-licensing": {
 				filename: "COPYRIGHT",
+				cwd: __dirname,
+				skipIfEmpty: true,
 			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
@@ -152,7 +134,7 @@ module.exports = ({
 				fix: true,
 				// Passing the config path saves a little time b/c it doesn't have to find it
 				configFile: join(__dirname, "stylelint.config.js"),
-				quiet: !verbose || lint,
+				quiet: lint || !verbose,
 				allowEmptyInput: true,
 				ignorePath: join(__dirname, ".stylelintignore"),
 				reportNeedlessDisables: lint,

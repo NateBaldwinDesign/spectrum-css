@@ -12,5 +12,5 @@
  */
 
 .spectrum {
-	--system-spectrum-tabs-font-weight: var(--spectrum-default-font-weight);
+	--system-tabs-font-weight: var(--spectrum-default-font-weight);
 }

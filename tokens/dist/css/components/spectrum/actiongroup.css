@@ -12,7 +12,7 @@
  */
 
 .spectrum {
-	--system-spectrum-actiongroup-gap-size-compact: 0;
-	--system-spectrum-actiongroup-horizontal-spacing-compact: -1px;
-	--system-spectrum-actiongroup-vertical-spacing-compact: -1px;
+	--system-action-group-gap-size-compact: 0;
+	--system-action-group-horizontal-spacing-compact: -1px;
+	--system-action-group-vertical-spacing-compact: -1px;
 }

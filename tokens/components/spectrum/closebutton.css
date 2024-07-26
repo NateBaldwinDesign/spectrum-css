@@ -12,8 +12,8 @@
  */
 
 .spectrum {
-	--system-spectrum-closebutton-background-color-default: transparent;
-	--system-spectrum-closebutton-background-color-hover: var(--spectrum-gray-200);
-	--system-spectrum-closebutton-background-color-down: var(--spectrum-gray-300);
-	--system-spectrum-closebutton-background-color-focus: var(--spectrum-gray-200);
+	--system-close-button-background-color-default: transparent;
+	--system-close-button-background-color-hover: var(--spectrum-gray-200);
+	--system-close-button-background-color-down: var(--spectrum-gray-300);
+	--system-close-button-background-color-focus: var(--spectrum-gray-200);
 }

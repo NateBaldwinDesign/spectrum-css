@@ -12,8 +12,8 @@
  */
 
 .spectrum {
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-down: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus: transparent;
+	--system-clear-button-background-color: transparent;
+	--system-clear-button-background-color-hover: transparent;
+	--system-clear-button-background-color-down: transparent;
+	--system-clear-button-background-color-key-focus: transparent;
 }

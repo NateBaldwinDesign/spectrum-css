@@ -12,5 +12,5 @@
  */
 
 .spectrum--express {
-	--system-spectrum-alertbanner-spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
+	--system-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
 }

@@ -657,7 +657,12 @@ async function build_forSiteStyles() {
 	return Promise.all(files.map(async (file) => {
 		const outputPath = path.join(dirs.publish, "css", file);
 		const content = await fsp.readFile(path.join(cwd, file));
-		return processCSS(content, path.join(cwd, file), outputPath, { cwd: dirs.root });
+		return processCSS({
+			content,
+			intput: path.join(cwd, file),
+			output: outputPath,
+			cwd: dirs.root
+		});
 	})).then((results = []) => {
 		const end = process.hrtime(start);
 		return [
