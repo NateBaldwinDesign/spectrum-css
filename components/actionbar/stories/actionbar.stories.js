@@ -80,12 +80,10 @@ export default {
 
 export const Default = ActionBarGroup.bind({});
 Default.args = {
-	customPopoverStyles: {
-		// Prevent the popover from being rendered offscreen
-		"--spectrum-popover-animation-distance": "-10px",
-		"inline-size": "600px",
-		"max-inline-size": "100%",
-	}
+	// customPopoverStyles: {
+	// 	// Prevent the popover from being rendered offscreen
+	// 	"--spectrum-popover-animation-distance": "-10px",
+	// }
 };
 
 // ********* VRT ONLY ********* //
@@ -104,12 +102,10 @@ export const Emphasized = Template.bind({});
 Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
-	customPopoverStyles: {
-		// Prevent the popover from being rendered offscreen
-		"--spectrum-popover-animation-distance": "-10px",
-		"inline-size": "600px",
-		"max-inline-size": "100%",
-	}
+	// customPopoverStyles: {
+	// 	// Prevent the popover from being rendered offscreen
+	// 	"--spectrum-popover-animation-distance": "-10px",
+	// }
 };
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
