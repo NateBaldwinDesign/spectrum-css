@@ -1,0 +1,80 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum-HelpText {
+	--spectrum-helptext-line-height: var(--system-spectrum-helptext-line-height);
+	--spectrum-helptext-content-color-default: var(--system-spectrum-helptext-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-spectrum-helptext-icon-color-default);
+	--spectrum-helptext-disabled-content-color: var(--system-spectrum-helptext-disabled-content-color);
+}
+.spectrum-HelpText.spectrum-HelpText--neutral {
+	--spectrum-helptext-content-color-default: var(--system-spectrum-helptext-neutral-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-spectrum-helptext-neutral-icon-color-default);
+}
+.spectrum-HelpText.spectrum-HelpText--negative {
+	--spectrum-helptext-content-color-default: var(--system-spectrum-helptext-negative-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-spectrum-helptext-negative-icon-color-default);
+}
+.spectrum-HelpText.is-disabled {
+	--spectrum-helptext-content-color-default: var(--system-spectrum-helptext-disabled-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-spectrum-helptext-disabled-icon-color-default);
+}
+.spectrum-HelpText:lang(ja) {
+	--spectrum-helptext-line-height-cjk: var(--system-spectrum-helptext: lang(ja)-spectrum-helptext: lang(ja)-spectrum-helptext-line-height-cjk);
+}
+.spectrum-HelpText:lang(zh) {
+	--spectrum-helptext-line-height-cjk: var(--system-spectrum-helptext: lang(zh)-spectrum-helptext: lang(zh)-spectrum-helptext-line-height-cjk);
+}
+.spectrum-HelpText:lang(ko) {
+	--spectrum-helptext-line-height-cjk: var(--system-spectrum-helptext: lang(ko)-spectrum-helptext: lang(ko)-spectrum-helptext-line-height-cjk);
+}
+.spectrum-HelpText--sizeS {
+	--spectrum-helptext-min-height: var(--system-spectrum-helptext-sizes-min-height);
+	--spectrum-helptext-icon-size: var(--system-spectrum-helptext-sizes-icon-size);
+	--spectrum-helptext-font-size: var(--system-spectrum-helptext-sizes-font-size);
+	--spectrum-helptext-text-to-visual: var(--system-spectrum-helptext-sizes-text-to-visual);
+	--spectrum-helptext-top-to-workflow-icon: var(--system-spectrum-helptext-sizes-top-to-workflow-icon);
+	--spectrum-helptext-bottom-to-workflow-icon: var(--system-spectrum-helptext-sizes-bottom-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--system-spectrum-helptext-sizes-top-to-text);
+	--spectrum-helptext-bottom-to-text: var(--system-spectrum-helptext-sizes-bottom-to-text);
+}
+.spectrum-HelpText--sizeM {
+	--spectrum-helptext-min-height: var(--system-spectrum-helptext-sizem-min-height);
+	--spectrum-helptext-icon-size: var(--system-spectrum-helptext-sizem-icon-size);
+	--spectrum-helptext-font-size: var(--system-spectrum-helptext-sizem-font-size);
+	--spectrum-helptext-text-to-visual: var(--system-spectrum-helptext-sizem-text-to-visual);
+	--spectrum-helptext-top-to-workflow-icon: var(--system-spectrum-helptext-sizem-top-to-workflow-icon);
+	--spectrum-helptext-bottom-to-workflow-icon: var(--system-spectrum-helptext-sizem-bottom-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--system-spectrum-helptext-sizem-top-to-text);
+	--spectrum-helptext-bottom-to-text: var(--system-spectrum-helptext-sizem-bottom-to-text);
+}
+.spectrum-HelpText--sizeL {
+	--spectrum-helptext-min-height: var(--system-spectrum-helptext-sizel-min-height);
+	--spectrum-helptext-icon-size: var(--system-spectrum-helptext-sizel-icon-size);
+	--spectrum-helptext-font-size: var(--system-spectrum-helptext-sizel-font-size);
+	--spectrum-helptext-text-to-visual: var(--system-spectrum-helptext-sizel-text-to-visual);
+	--spectrum-helptext-top-to-workflow-icon: var(--system-spectrum-helptext-sizel-top-to-workflow-icon);
+	--spectrum-helptext-bottom-to-workflow-icon: var(--system-spectrum-helptext-sizel-bottom-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--system-spectrum-helptext-sizel-top-to-text);
+	--spectrum-helptext-bottom-to-text: var(--system-spectrum-helptext-sizel-bottom-to-text);
+}
+.spectrum-HelpText--sizeXL {
+	--spectrum-helptext-min-height: var(--system-spectrum-helptext-sizexl-min-height);
+	--spectrum-helptext-icon-size: var(--system-spectrum-helptext-sizexl-icon-size);
+	--spectrum-helptext-font-size: var(--system-spectrum-helptext-sizexl-font-size);
+	--spectrum-helptext-text-to-visual: var(--system-spectrum-helptext-sizexl-text-to-visual);
+	--spectrum-helptext-top-to-workflow-icon: var(--system-spectrum-helptext-sizexl-top-to-workflow-icon);
+	--spectrum-helptext-bottom-to-workflow-icon: var(--system-spectrum-helptext-sizexl-bottom-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--system-spectrum-helptext-sizexl-top-to-text);
+	--spectrum-helptext-bottom-to-text: var(--system-spectrum-helptext-sizexl-bottom-to-text);
+}

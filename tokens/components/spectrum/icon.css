@@ -1,0 +1,151 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-icon-sizexxs-size: var(--spectrum-workflow-icon-size-xxs);
+	--system-spectrum-icon-sizexs-size: var(--spectrum-workflow-icon-size-50);
+	--system-spectrum-icon-sizes-size: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-icon-sizel-size: var(--spectrum-workflow-icon-size-200);
+	--system-spectrum-icon-sizexl-size: var(--spectrum-workflow-icon-size-300);
+	--system-spectrum-icon-sizexxl-size: var(--spectrum-workflow-icon-size-xxl);
+	--system-spectrum-uiicon-chevronright50-spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
+	--system-spectrum-uiicon-chevronright75-spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
+	--system-spectrum-uiicon-chevronright100-spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
+	--system-spectrum-uiicon-chevronright200-spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
+	--system-spectrum-uiicon-chevronright300-spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
+	--system-spectrum-uiicon-chevronright400-spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
+	--system-spectrum-uiicon-chevronright500-spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
+	--system-spectrum-uiicon-chevrondown50-spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
+	--system-spectrum-uiicon-chevrondown50-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown75-spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
+	--system-spectrum-uiicon-chevrondown75-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown100-spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
+	--system-spectrum-uiicon-chevrondown100-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown200-spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
+	--system-spectrum-uiicon-chevrondown200-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown300-spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
+	--system-spectrum-uiicon-chevrondown300-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown400-spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
+	--system-spectrum-uiicon-chevrondown400-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevrondown500-spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
+	--system-spectrum-uiicon-chevrondown500-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-chevronleft50-spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
+	--system-spectrum-uiicon-chevronleft50-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft75-spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
+	--system-spectrum-uiicon-chevronleft75-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft100-spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
+	--system-spectrum-uiicon-chevronleft100-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft200-spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
+	--system-spectrum-uiicon-chevronleft200-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft300-spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
+	--system-spectrum-uiicon-chevronleft300-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft400-spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
+	--system-spectrum-uiicon-chevronleft400-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronleft500-spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
+	--system-spectrum-uiicon-chevronleft500-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-chevronup50-spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
+	--system-spectrum-uiicon-chevronup50-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup75-spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
+	--system-spectrum-uiicon-chevronup75-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup100-spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
+	--system-spectrum-uiicon-chevronup100-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup200-spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
+	--system-spectrum-uiicon-chevronup200-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup300-spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
+	--system-spectrum-uiicon-chevronup300-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup400-spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
+	--system-spectrum-uiicon-chevronup400-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-chevronup500-spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
+	--system-spectrum-uiicon-chevronup500-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowright75-spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
+	--system-spectrum-uiicon-arrowright100-spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
+	--system-spectrum-uiicon-arrowright200-spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
+	--system-spectrum-uiicon-arrowright300-spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
+	--system-spectrum-uiicon-arrowright400-spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
+	--system-spectrum-uiicon-arrowright500-spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
+	--system-spectrum-uiicon-arrowright600-spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
+	--system-spectrum-uiicon-arrowdown75-spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
+	--system-spectrum-uiicon-arrowdown75-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown100-spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
+	--system-spectrum-uiicon-arrowdown100-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown200-spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
+	--system-spectrum-uiicon-arrowdown200-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown300-spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
+	--system-spectrum-uiicon-arrowdown300-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown400-spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
+	--system-spectrum-uiicon-arrowdown400-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown500-spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
+	--system-spectrum-uiicon-arrowdown500-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowdown600-spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
+	--system-spectrum-uiicon-arrowdown600-spectrum-icon-transform: rotate(90deg);
+	--system-spectrum-uiicon-arrowleft75-spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
+	--system-spectrum-uiicon-arrowleft75-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft100-spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
+	--system-spectrum-uiicon-arrowleft100-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft200-spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
+	--system-spectrum-uiicon-arrowleft200-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft300-spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
+	--system-spectrum-uiicon-arrowleft300-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft400-spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
+	--system-spectrum-uiicon-arrowleft400-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft500-spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
+	--system-spectrum-uiicon-arrowleft500-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowleft600-spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
+	--system-spectrum-uiicon-arrowleft600-spectrum-icon-transform: rotate(180deg);
+	--system-spectrum-uiicon-arrowup75-spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
+	--system-spectrum-uiicon-arrowup75-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup100-spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
+	--system-spectrum-uiicon-arrowup100-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup200-spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
+	--system-spectrum-uiicon-arrowup200-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup300-spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
+	--system-spectrum-uiicon-arrowup300-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup400-spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
+	--system-spectrum-uiicon-arrowup400-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup500-spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
+	--system-spectrum-uiicon-arrowup500-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-arrowup600-spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
+	--system-spectrum-uiicon-arrowup600-spectrum-icon-transform: rotate(270deg);
+	--system-spectrum-uiicon-checkmark50-spectrum-icon-size: var(--spectrum-checkmark-icon-size-50);
+	--system-spectrum-uiicon-checkmark75-spectrum-icon-size: var(--spectrum-checkmark-icon-size-75);
+	--system-spectrum-uiicon-checkmark100-spectrum-icon-size: var(--spectrum-checkmark-icon-size-100);
+	--system-spectrum-uiicon-checkmark200-spectrum-icon-size: var(--spectrum-checkmark-icon-size-200);
+	--system-spectrum-uiicon-checkmark300-spectrum-icon-size: var(--spectrum-checkmark-icon-size-300);
+	--system-spectrum-uiicon-checkmark400-spectrum-icon-size: var(--spectrum-checkmark-icon-size-400);
+	--system-spectrum-uiicon-checkmark500-spectrum-icon-size: var(--spectrum-checkmark-icon-size-500);
+	--system-spectrum-uiicon-checkmark600-spectrum-icon-size: var(--spectrum-checkmark-icon-size-600);
+	--system-spectrum-uiicon-dash50-spectrum-icon-size: var(--spectrum-dash-icon-size-50);
+	--system-spectrum-uiicon-dash75-spectrum-icon-size: var(--spectrum-dash-icon-size-75);
+	--system-spectrum-uiicon-dash100-spectrum-icon-size: var(--spectrum-dash-icon-size-100);
+	--system-spectrum-uiicon-dash200-spectrum-icon-size: var(--spectrum-dash-icon-size-200);
+	--system-spectrum-uiicon-dash300-spectrum-icon-size: var(--spectrum-dash-icon-size-300);
+	--system-spectrum-uiicon-dash400-spectrum-icon-size: var(--spectrum-dash-icon-size-400);
+	--system-spectrum-uiicon-dash500-spectrum-icon-size: var(--spectrum-dash-icon-size-500);
+	--system-spectrum-uiicon-dash600-spectrum-icon-size: var(--spectrum-dash-icon-size-600);
+	--system-spectrum-uiicon-cross75-spectrum-icon-size: var(--spectrum-cross-icon-size-75);
+	--system-spectrum-uiicon-cross100-spectrum-icon-size: var(--spectrum-cross-icon-size-100);
+	--system-spectrum-uiicon-cross200-spectrum-icon-size: var(--spectrum-cross-icon-size-200);
+	--system-spectrum-uiicon-cross300-spectrum-icon-size: var(--spectrum-cross-icon-size-300);
+	--system-spectrum-uiicon-cross400-spectrum-icon-size: var(--spectrum-cross-icon-size-400);
+	--system-spectrum-uiicon-cross500-spectrum-icon-size: var(--spectrum-cross-icon-size-500);
+	--system-spectrum-uiicon-cross600-spectrum-icon-size: var(--spectrum-cross-icon-size-600);
+	--system-spectrum-uiicon-cornertriangle75-spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-75);
+	--system-spectrum-uiicon-cornertriangle100-spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-100);
+	--system-spectrum-uiicon-cornertriangle200-spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-200);
+	--system-spectrum-uiicon-cornertriangle300-spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-300);
+	--system-spectrum-uiicon-asterisk75-spectrum-icon-size: var(--spectrum-asterisk-icon-size-75);
+	--system-spectrum-uiicon-asterisk100-spectrum-icon-size: var(--spectrum-asterisk-icon-size-100);
+	--system-spectrum-uiicon-asterisk200-spectrum-icon-size: var(--spectrum-asterisk-icon-size-200);
+	--system-spectrum-uiicon-asterisk300-spectrum-icon-size: var(--spectrum-asterisk-icon-size-300);
+}

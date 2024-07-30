@@ -19,20 +19,65 @@
 	--spectrum-search-border-color-focus: var(--system-spectrum-search-border-color-focus);
 	--spectrum-search-border-color-focus-hover: var(--system-spectrum-search-border-color-focus-hover);
 	--spectrum-search-border-color-key-focus: var(--system-spectrum-search-border-color-key-focus);
+	--spectrum-search-inline-size: var(--system-spectrum-search-inline-size);
+	--spectrum-search-block-size: var(--system-spectrum-search-block-size);
+	--spectrum-search-button-inline-size: var(--system-spectrum-search-button-inline-size);
+	--spectrum-search-min-inline-size: var(--system-spectrum-search-min-inline-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-text-to-icon);
+	--spectrum-search-to-help-text: var(--system-spectrum-search-to-help-text);
+	--spectrum-search-top-to-text: var(--system-spectrum-search-top-to-text);
+	--spectrum-search-bottom-to-text: var(--system-spectrum-search-bottom-to-text);
+	--spectrum-search-focus-indicator-thickness: var(--system-spectrum-search-focus-indicator-thickness);
+	--spectrum-search-focus-indicator-gap: var(--system-spectrum-search-focus-indicator-gap);
+	--spectrum-search-focus-indicator-color: var(--system-spectrum-search-focus-indicator-color);
+	--spectrum-search-font-family: var(--system-spectrum-search-font-family);
+	--spectrum-search-font-weight: var(--system-spectrum-search-font-weight);
+	--spectrum-search-font-style: var(--system-spectrum-search-font-style);
+	--spectrum-search-line-height: var(--system-spectrum-search-line-height);
+	--spectrum-search-color-default: var(--system-spectrum-search-color-default);
+	--spectrum-search-color-hover: var(--system-spectrum-search-color-hover);
+	--spectrum-search-color-focus: var(--system-spectrum-search-color-focus);
+	--spectrum-search-color-focus-hover: var(--system-spectrum-search-color-focus-hover);
+	--spectrum-search-color-key-focus: var(--system-spectrum-search-color-key-focus);
+	--spectrum-search-border-width: var(--system-spectrum-search-border-width);
+	--spectrum-search-background-color: var(--system-spectrum-search-background-color);
+	--spectrum-search-color-disabled: var(--system-spectrum-search-color-disabled);
+	--spectrum-search-background-color-disabled: var(--system-spectrum-search-background-color-disabled);
+	--spectrum-search-border-color-disabled: var(--system-spectrum-search-border-color-disabled);
 }
 .spectrum-Search--sizeS {
 	--spectrum-search-border-radius: var(--system-spectrum-search-sizes-border-radius);
 	--spectrum-search-edge-to-visual: var(--system-spectrum-search-sizes-edge-to-visual);
-}
-.spectrum-Search--sizeM {
-	--spectrum-search-border-radius: var(--system-spectrum-search-sizem-border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search-sizem-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-sizes-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-sizes-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-sizes-text-to-icon);
 }
 .spectrum-Search--sizeL {
 	--spectrum-search-border-radius: var(--system-spectrum-search-sizel-border-radius);
 	--spectrum-search-edge-to-visual: var(--system-spectrum-search-sizel-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-sizel-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-sizel-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-sizel-text-to-icon);
 }
 .spectrum-Search--sizeXL {
 	--spectrum-search-border-radius: var(--system-spectrum-search-sizexl-border-radius);
 	--spectrum-search-edge-to-visual: var(--system-spectrum-search-sizexl-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-sizexl-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-sizexl-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-sizexl-text-to-icon);
+}
+.spectrum-Search--quiet {
+	--spectrum-search-quiet-button-offset: var(--mod-search-block-size, var(--system-spectrum-search-quiet-quiet-button-offset));
+	--spectrum-search-background-color: var(--system-spectrum-search-quiet-background-color);
+	--spectrum-search-background-color-disabled: var(--system-spectrum-search-quiet-background-color-disabled);
+	--spectrum-search-border-color-disabled: var(--system-spectrum-search-quiet-border-color-disabled);
+}
+.spectrum-Search--quiet.spectrum-Search {
+	--spectrum-search-border-radius: var(--system-spectrum-search-quiet-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-quiet-edge-to-visual);
+}
+.spectrum-Search--sizeM {
+	--spectrum-search-border-radius: var(--system-spectrum-search-sizem-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-sizem-edge-to-visual);
 }

@@ -1,0 +1,130 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--spectrum-font-family-ar: var(--system-spectrum-spectrum-font-family-ar);
+	--spectrum-font-family-he: var(--system-spectrum-spectrum-font-family-he);
+	--spectrum-font-family: var(--system-spectrum-spectrum-font-family);
+	--spectrum-font-style: var(--system-spectrum-spectrum-font-style);
+	--spectrum-font-size: var(--system-spectrum-spectrum-font-size);
+}
+.spectrum-Heading {
+	--spectrum-heading-sans-serif-font-family: var(--system-spectrum-heading-sans-serif-font-family);
+	--spectrum-heading-serif-font-family: var(--system-spectrum-heading-serif-font-family);
+	--spectrum-heading-cjk-font-family: var(--system-spectrum-heading-cjk-font-family);
+	--spectrum-heading-cjk-letter-spacing: var(--system-spectrum-heading-cjk-letter-spacing);
+	--spectrum-heading-font-color: var(--system-spectrum-heading-font-color);
+	--spectrum-heading-font-size: var(--system-spectrum-heading-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-cjk-font-size);
+}
+.spectrum-Heading--sizeXXS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxs-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxs-cjk-font-size);
+}
+.spectrum-Heading--sizeXS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexs-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexs-cjk-font-size);
+}
+.spectrum-Heading--sizeS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizes-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizes-cjk-font-size);
+}
+.spectrum-Heading--sizeM {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizem-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizem-cjk-font-size);
+}
+.spectrum-Heading--sizeL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizel-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizel-cjk-font-size);
+}
+.spectrum-Heading--sizeXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexl-cjk-font-size);
+}
+.spectrum-Heading--sizeXXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxl-cjk-font-size);
+}
+.spectrum-Heading--sizeXXXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxxl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxxl-cjk-font-size);
+}
+.spectrum-Body {
+	--spectrum-body-sans-serif-font-family: var(--system-spectrum-body-sans-serif-font-family);
+	--spectrum-body-serif-font-family: var(--system-spectrum-body-serif-font-family);
+	--spectrum-body-cjk-font-family: var(--system-spectrum-body-cjk-font-family);
+	--spectrum-body-cjk-letter-spacing: var(--system-spectrum-body-cjk-letter-spacing);
+	--spectrum-body-font-color: var(--system-spectrum-body-font-color);
+	--spectrum-body-font-size: var(--system-spectrum-body-font-size);
+}
+.spectrum-Body--sizeXS {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexs-font-size);
+}
+.spectrum-Body--sizeS {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizes-font-size);
+}
+.spectrum-Body--sizeM {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizem-font-size);
+}
+.spectrum-Body--sizeL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizel-font-size);
+}
+.spectrum-Body--sizeXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexl-font-size);
+}
+.spectrum-Body--sizeXXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexxl-font-size);
+}
+.spectrum-Body--sizeXXXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexxxl-font-size);
+}
+.spectrum-Detail {
+	--spectrum-detail-sans-serif-font-family: var(--system-spectrum-detail-sans-serif-font-family);
+	--spectrum-detail-serif-font-family: var(--system-spectrum-detail-serif-font-family);
+	--spectrum-detail-cjk-font-family: var(--system-spectrum-detail-cjk-font-family);
+	--spectrum-detail-font-color: var(--system-spectrum-detail-font-color);
+	--spectrum-detail-font-size: var(--system-spectrum-detail-font-size);
+}
+.spectrum-Detail--sizeS {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizes-font-size);
+}
+.spectrum-Detail--sizeM {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizem-font-size);
+}
+.spectrum-Detail--sizeL {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizel-font-size);
+}
+.spectrum-Detail--sizeXL {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizexl-font-size);
+}
+.spectrum-Code {
+	--spectrum-code-font-family: var(--system-spectrum-code-font-family);
+	--spectrum-code-cjk-letter-spacing: var(--system-spectrum-code-cjk-letter-spacing);
+	--spectrum-code-font-color: var(--system-spectrum-code-font-color);
+	--spectrum-code-font-size: var(--system-spectrum-code-font-size);
+}
+.spectrum-Code--sizeXS {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizexs-font-size);
+}
+.spectrum-Code--sizeS {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizes-font-size);
+}
+.spectrum-Code--sizeM {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizem-font-size);
+}
+.spectrum-Code--sizeL {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizel-font-size);
+}
+.spectrum-Code--sizeXL {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizexl-font-size);
+}

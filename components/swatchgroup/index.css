@@ -11,11 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing-compact: var(--spectrum-spacing-50);
-	--spectrum-swatchgroup-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-swatchgroup-spacing-spacious: var(--spectrum-spacing-100);
-}
+@import "./themes/express.css";
 
 .spectrum-SwatchGroup {
 	display: inline-flex;

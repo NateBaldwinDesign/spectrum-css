@@ -13,4 +13,120 @@
 
 .spectrum-Tabs {
 	--spectrum-tabs-font-weight: var(--system-spectrum-tabs-font-weight);
+	--spectrum-tabs-item-height: var(--system-spectrum-tabs-item-height);
+	--spectrum-tabs-item-horizontal-spacing: var(--system-spectrum-tabs-item-horizontal-spacing);
+	--spectrum-tabs-item-vertical-spacing: var(--system-spectrum-tabs-item-vertical-spacing);
+	--spectrum-tabs-start-to-edge: var(--system-spectrum-tabs-start-to-edge);
+	--spectrum-tabs-top-to-text: var(--system-spectrum-tabs-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-spectrum-tabs-bottom-to-text);
+	--spectrum-tabs-icon-size: var(--system-spectrum-tabs-icon-size);
+	--spectrum-tabs-icon-to-text: var(--system-spectrum-tabs-icon-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-spectrum-tabs-top-to-icon);
+	--spectrum-tabs-color: var(--system-spectrum-tabs-color);
+	--spectrum-tabs-color-selected: var(--system-spectrum-tabs-color-selected);
+	--spectrum-tabs-color-hover: var(--system-spectrum-tabs-color-hover);
+	--spectrum-tabs-color-key-focus: var(--system-spectrum-tabs-color-key-focus);
+	--spectrum-tabs-color-disabled: var(--system-spectrum-tabs-color-disabled);
+	--spectrum-tabs-font-family: var(--system-spectrum-tabs-font-family);
+	--spectrum-tabs-font-style: var(--system-spectrum-tabs-font-style);
+	--spectrum-tabs-font-size: var(--system-spectrum-tabs-font-size);
+	--spectrum-tabs-line-height: var(--system-spectrum-tabs-line-height);
+	--spectrum-tabs-focus-indicator-width: var(--system-spectrum-tabs-focus-indicator-width);
+	--spectrum-tabs-focus-indicator-border-radius: var(--system-spectrum-tabs-focus-indicator-border-radius);
+	--spectrum-tabs-focus-indicator-gap: var(--system-spectrum-tabs-focus-indicator-gap);
+	--spectrum-tabs-focus-indicator-color: var(--system-spectrum-tabs-focus-indicator-color);
+	--spectrum-tabs-selection-indicator-color: var(--system-spectrum-tabs-selection-indicator-color);
+	--spectrum-tabs-list-background-direction: var(--system-spectrum-tabs-list-background-direction);
+	--spectrum-tabs-divider-background-color: var(--system-spectrum-tabs-divider-background-color);
+	--spectrum-tabs-divider-size: var(--system-spectrum-tabs-divider-size);
+	--spectrum-tabs-divider-border-radius: var(--system-spectrum-tabs-divider-border-radius);
+	--spectrum-tabs-animation-duration: var(--system-spectrum-tabs-animation-duration);
+	--spectrum-tabs-animation-ease: var(--system-spectrum-tabs-animation-ease);
+}
+.spectrum-Tabs.spectrum-Tabs--sizeS {
+	--spectrum-tabs-item-height: var(--system-spectrum-tabs-sizes-item-height);
+	--spectrum-tabs-item-horizontal-spacing: var(--system-spectrum-tabs-sizes-item-horizontal-spacing);
+	--spectrum-tabs-item-vertical-spacing: var(--system-spectrum-tabs-sizes-item-vertical-spacing);
+	--spectrum-tabs-start-to-edge: var(--system-spectrum-tabs-sizes-start-to-edge);
+	--spectrum-tabs-top-to-text: var(--system-spectrum-tabs-sizes-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-spectrum-tabs-sizes-bottom-to-text);
+	--spectrum-tabs-icon-size: var(--system-spectrum-tabs-sizes-icon-size);
+	--spectrum-tabs-icon-to-text: var(--system-spectrum-tabs-sizes-icon-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-spectrum-tabs-sizes-top-to-icon);
+	--spectrum-tabs-focus-indicator-gap: var(--system-spectrum-tabs-sizes-focus-indicator-gap);
+	--spectrum-tabs-font-size: var(--system-spectrum-tabs-sizes-font-size);
+}
+.spectrum-Tabs.spectrum-Tabs--sizeL {
+	--spectrum-tabs-item-height: var(--system-spectrum-tabs-sizel-item-height);
+	--spectrum-tabs-item-horizontal-spacing: var(--system-spectrum-tabs-sizel-item-horizontal-spacing);
+	--spectrum-tabs-item-vertical-spacing: var(--system-spectrum-tabs-sizel-item-vertical-spacing);
+	--spectrum-tabs-start-to-edge: var(--system-spectrum-tabs-sizel-start-to-edge);
+	--spectrum-tabs-top-to-text: var(--system-spectrum-tabs-sizel-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-spectrum-tabs-sizel-bottom-to-text);
+	--spectrum-tabs-icon-size: var(--system-spectrum-tabs-sizel-icon-size);
+	--spectrum-tabs-icon-to-text: var(--system-spectrum-tabs-sizel-icon-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-spectrum-tabs-sizel-top-to-icon);
+	--spectrum-tabs-focus-indicator-gap: var(--system-spectrum-tabs-sizel-focus-indicator-gap);
+	--spectrum-tabs-font-size: var(--system-spectrum-tabs-sizel-font-size);
+}
+.spectrum-Tabs.spectrum-Tabs--sizeXL {
+	--spectrum-tabs-item-height: var(--system-spectrum-tabs-sizexl-item-height);
+	--spectrum-tabs-item-horizontal-spacing: var(--system-spectrum-tabs-sizexl-item-horizontal-spacing);
+	--spectrum-tabs-item-vertical-spacing: var(--system-spectrum-tabs-sizexl-item-vertical-spacing);
+	--spectrum-tabs-start-to-edge: var(--system-spectrum-tabs-sizexl-start-to-edge);
+	--spectrum-tabs-top-to-text: var(--system-spectrum-tabs-sizexl-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-spectrum-tabs-sizexl-bottom-to-text);
+	--spectrum-tabs-icon-size: var(--system-spectrum-tabs-sizexl-icon-size);
+	--spectrum-tabs-icon-to-text: var(--system-spectrum-tabs-sizexl-icon-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-spectrum-tabs-sizexl-top-to-icon);
+	--spectrum-tabs-focus-indicator-gap: var(--system-spectrum-tabs-sizexl-focus-indicator-gap);
+	--spectrum-tabs-font-size: var(--system-spectrum-tabs-sizexl-font-size);
+}
+.spectrum-Tabs.spectrum-Tabs--emphasized {
+	--spectrum-tabs-color-selected: var(--mod-tabs-color-selected-emphasized, var(--system-spectrum-tabs-emphasized-color-selected));
+	--spectrum-tabs-color-hover: var(--mod-tabs-color-hover-emphasized, var(--system-spectrum-tabs-emphasized-color-hover));
+	--spectrum-tabs-color-key-focus: var(--mod-tabs-color-key-focus-emphasized, var(--system-spectrum-tabs-emphasized-color-key-focus));
+	--spectrum-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color-emphasized, var(--system-spectrum-tabs-emphasized-selection-indicator-color));
+}
+.spectrum-Tabs.spectrum-Tabs--vertical {
+	--spectrum-tabs-list-background-direction: var(--system-spectrum-tabs-vertical-list-background-direction);
+}
+.spectrum-Tabs.spectrum-Tabs--vertical-right {
+	--spectrum-tabs-list-background-direction: var(--system-spectrum-tabs-vertical-right-list-background-direction);
+}
+[dir="rtl"] .spectrum-Tabs.spectrum-Tabs--vertical {
+	--spectrum-tabs-list-background-direction: var(--system-[dir= "rtl"]-spectrum-tabs-spectrum-tabs-vertical-spectrum-tabs-list-background-direction);
+}
+.spectrum-Tabs.spectrum-Tabs--vertical:dir(rtl) {
+	--spectrum-tabs-list-background-direction: var(--system-spectrum-tabs-vertical: dir(rtl)-list-background-direction);
+}
+[dir="rtl"] .spectrum-Tabs.spectrum-Tabs--vertical-right {
+	--spectrum-tabs-list-background-direction: var(--system-[dir= "rtl"]-spectrum-tabs-spectrum-tabs-vertical-right-spectrum-tabs-list-background-direction);
+}
+.spectrum-Tabs.spectrum-Tabs--vertical-right:dir(rtl) {
+	--spectrum-tabs-list-background-direction: var(--system-spectrum-tabs-vertical-right: dir(rtl)-list-background-direction);
+}
+.spectrum-Tabs.spectrum-Tabs--compact {
+	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--system-spectrum-tabs-compact-item-height));
+	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--system-spectrum-tabs-compact-top-to-text));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--system-spectrum-tabs-compact-bottom-to-text));
+	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--system-spectrum-tabs-compact-top-to-icon));
+}
+.spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeS {
+	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--system-spectrum-tabs-compact-sizes-item-height));
+	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--system-spectrum-tabs-compact-sizes-top-to-text));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--system-spectrum-tabs-compact-sizes-bottom-to-text));
+	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--system-spectrum-tabs-compact-sizes-top-to-icon));
+}
+.spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeL {
+	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--system-spectrum-tabs-compact-sizel-item-height));
+	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--system-spectrum-tabs-compact-sizel-top-to-text));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--system-spectrum-tabs-compact-sizel-bottom-to-text));
+	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--system-spectrum-tabs-compact-sizel-top-to-icon));
+}
+.spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeXL {
+	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--system-spectrum-tabs-compact-sizexl-item-height));
+	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--system-spectrum-tabs-compact-sizexl-top-to-text));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--system-spectrum-tabs-compact-sizexl-bottom-to-text));
+	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--system-spectrum-tabs-compact-sizexl-top-to-icon));
 }

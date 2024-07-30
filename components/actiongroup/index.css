@@ -14,25 +14,6 @@
 @import "./themes/express.css";
 
 .spectrum-ActionGroup {
-	--spectrum-actiongroup-button-spacing-reset: 0;
-	--spectrum-actiongroup-border-radius-reset: 0;
-	--spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-}
-
-.spectrum-ActionGroup--sizeXS,
-.spectrum-ActionGroup--sizeS {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-}
-
-.spectrum-ActionGroup--sizeM,
-.spectrum-ActionGroup--sizeL,
-.spectrum-ActionGroup--sizeXL {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-}
-
-.spectrum-ActionGroup {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));

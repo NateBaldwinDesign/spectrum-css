@@ -13,4 +13,17 @@
 
 .spectrum-Popover {
 	--spectrum-popover-border-width: var(--system-spectrum-popover-border-width);
+	--spectrum-popover-animation-distance: var(--system-spectrum-popover-animation-distance);
+	--spectrum-popover-background-color: var(--system-spectrum-popover-background-color);
+	--spectrum-popover-border-color: var(--system-spectrum-popover-border-color);
+	--spectrum-popover-content-area-spacing-vertical: var(--system-spectrum-popover-content-area-spacing-vertical);
+	--spectrum-popover-shadow-horizontal: var(--system-spectrum-popover-shadow-horizontal);
+	--spectrum-popover-shadow-vertical: var(--system-spectrum-popover-shadow-vertical);
+	--spectrum-popover-shadow-blur: var(--system-spectrum-popover-shadow-blur);
+	--spectrum-popover-shadow-color: var(--system-spectrum-popover-shadow-color);
+	--spectrum-popover-corner-radius: var(--system-spectrum-popover-corner-radius);
+	--spectrum-popover-pointer-width: var(--system-spectrum-popover-pointer-width);
+	--spectrum-popover-pointer-height: var(--system-spectrum-popover-pointer-height);
+	--spectrum-popover-pointer-edge-offset: var(--system-spectrum-popover-pointer-edge-offset);
+	--spectrum-popover-pointer-edge-spacing: var(--system-spectrum-popover-pointer-edge-spacing);
 }

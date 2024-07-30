@@ -28,6 +28,62 @@
 	--spectrum-button-border-color-disabled: var(--system-spectrum-button-border-color-disabled);
 	--spectrum-button-content-color-disabled: var(--system-spectrum-button-content-color-disabled);
 }
+.spectrum-Button.spectrum-Button--sizeS {
+	--spectrum-button-min-width: var(--system-spectrum-button-sizes-min-width);
+	--spectrum-button-border-radius: var(--system-spectrum-button-sizes-border-radius);
+	--spectrum-button-height: var(--system-spectrum-button-sizes-height);
+	--spectrum-button-font-size: var(--system-spectrum-button-sizes-font-size);
+	--spectrum-button-edge-to-visual: var(--system-spectrum-button-sizes-edge-to-visual);
+	--spectrum-button-edge-to-visual-only: var(--system-spectrum-button-sizes-edge-to-visual-only);
+	--spectrum-button-edge-to-text: var(--system-spectrum-button-sizes-edge-to-text);
+	--spectrum-button-padding-label-to-icon: var(--system-spectrum-button-sizes-padding-label-to-icon);
+	--spectrum-button-top-to-text: var(--system-spectrum-button-sizes-top-to-text);
+	--spectrum-button-bottom-to-text: var(--system-spectrum-button-sizes-bottom-to-text);
+	--spectrum-button-top-to-icon: var(--system-spectrum-button-sizes-top-to-icon);
+	--spectrum-button-intended-icon-size: var(--system-spectrum-button-sizes-intended-icon-size);
+}
+.spectrum-Button.spectrum-Button--sizeM {
+	--spectrum-button-min-width: var(--system-spectrum-button-sizem-min-width);
+	--spectrum-button-border-radius: var(--system-spectrum-button-sizem-border-radius);
+	--spectrum-button-height: var(--system-spectrum-button-sizem-height);
+	--spectrum-button-font-size: var(--system-spectrum-button-sizem-font-size);
+	--spectrum-button-edge-to-visual: var(--system-spectrum-button-sizem-edge-to-visual);
+	--spectrum-button-edge-to-visual-only: var(--system-spectrum-button-sizem-edge-to-visual-only);
+	--spectrum-button-edge-to-text: var(--system-spectrum-button-sizem-edge-to-text);
+	--spectrum-button-padding-label-to-icon: var(--system-spectrum-button-sizem-padding-label-to-icon);
+	--spectrum-button-top-to-text: var(--system-spectrum-button-sizem-top-to-text);
+	--spectrum-button-bottom-to-text: var(--system-spectrum-button-sizem-bottom-to-text);
+	--spectrum-button-top-to-icon: var(--system-spectrum-button-sizem-top-to-icon);
+	--spectrum-button-intended-icon-size: var(--system-spectrum-button-sizem-intended-icon-size);
+}
+.spectrum-Button.spectrum-Button--sizeL {
+	--spectrum-button-min-width: var(--system-spectrum-button-sizel-min-width);
+	--spectrum-button-border-radius: var(--system-spectrum-button-sizel-border-radius);
+	--spectrum-button-height: var(--system-spectrum-button-sizel-height);
+	--spectrum-button-font-size: var(--system-spectrum-button-sizel-font-size);
+	--spectrum-button-edge-to-visual: var(--system-spectrum-button-sizel-edge-to-visual);
+	--spectrum-button-edge-to-visual-only: var(--system-spectrum-button-sizel-edge-to-visual-only);
+	--spectrum-button-edge-to-text: var(--system-spectrum-button-sizel-edge-to-text);
+	--spectrum-button-padding-label-to-icon: var(--system-spectrum-button-sizel-padding-label-to-icon);
+	--spectrum-button-top-to-text: var(--system-spectrum-button-sizel-top-to-text);
+	--spectrum-button-bottom-to-text: var(--system-spectrum-button-sizel-bottom-to-text);
+	--spectrum-button-top-to-icon: var(--system-spectrum-button-sizel-top-to-icon);
+	--spectrum-button-intended-icon-size: var(--system-spectrum-button-sizel-intended-icon-size);
+}
+.spectrum-Button.spectrum-Button--sizeXL {
+	--spectrum-button-min-width: var(--system-spectrum-button-sizexl-min-width);
+	--spectrum-button-border-radius: var(--system-spectrum-button-sizexl-border-radius);
+	--spectrum-button-height: var(--system-spectrum-button-sizexl-height);
+	--spectrum-button-font-size: var(--system-spectrum-button-sizexl-font-size);
+	--spectrum-button-edge-to-visual: var(--system-spectrum-button-sizexl-edge-to-visual);
+	--spectrum-button-edge-to-visual-only: var(--system-spectrum-button-sizexl-edge-to-visual-only);
+	--spectrum-button-edge-to-text: var(--system-spectrum-button-sizexl-edge-to-text);
+	--spectrum-button-padding-label-to-icon: var(--system-spectrum-button-sizexl-padding-label-to-icon);
+	--spectrum-button-top-to-text: var(--system-spectrum-button-sizexl-top-to-text);
+	--spectrum-button-bottom-to-text: var(--system-spectrum-button-sizexl-bottom-to-text);
+	--spectrum-button-top-to-icon: var(--system-spectrum-button-sizexl-top-to-icon);
+	--spectrum-button-intended-icon-size: var(--system-spectrum-button-sizexl-intended-icon-size);
+}
 .spectrum-Button.spectrum-Button--accent {
 	--spectrum-button-background-color-default: var(--system-spectrum-button-accent-background-color-default);
 	--spectrum-button-background-color-hover: var(--system-spectrum-button-accent-background-color-hover);
