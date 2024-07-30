@@ -73,6 +73,7 @@ export const Template = ({
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
 			aria-pressed=${isSelected ? "true" : "false"}
+			popovertarget=${ifDefined(popupId)}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
