@@ -54,7 +54,6 @@ export default {
 
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
-	isOpen: true,
 	position: "bottom",
 	label: "More actions",
 	iconName: "More",

@@ -93,6 +93,7 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
+			popovertarget=${ifDefined(popupId)}
 			@click=${onclick}
 			@focusin=${function() {
 				updateArgs({ isFocused: true });

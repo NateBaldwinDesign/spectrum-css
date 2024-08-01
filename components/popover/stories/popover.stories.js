@@ -2,7 +2,6 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { html } from "lit";
 import { version } from "../package.json";
 import { PopoverGroup } from "./popover.test";
 import { Template } from "./template";
@@ -30,66 +29,45 @@ export default {
 		},
 		position: {
 			name: "Positioning",
+			description: "When updating the position, close the popover and reopen it to see the changes in placement.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
 			control: "select",
-			options: [
-				"top",
-				"top-left",
-				"top-right",
-				"top-start",
-				"top-end",
-				"bottom",
-				"bottom-left",
-				"bottom-right",
-				"bottom-start",
-				"bottom-end",
-				"right",
-				"right-bottom",
-				"right-top",
-				"left",
-				"left-bottom",
-				"left-top",
-				"start",
-				"start-top",
-				"start-bottom",
-				"end",
-				"end-top",
-				"end-bottom",
-			],
+			options: ["top", "top-start", "top-end", "right", "right-start", "right-end", "bottom", "bottom-start", "bottom-end", "left", "left-start", "left-end"],
 			if: { arg: "nested", truthy: false },
+		},
+		offset: {
+			name: "Offset",
+			description: "The offset in pixels from the trigger.",
+			type: { name: "number" },
+			table: {
+				disable: true,
+				type: { summary: "number" },
+				category: "Component",
+			},
+			control: { type: "number" },
 		},
 	},
 	args: {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
-		position: "right",
-		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
+		position: "right-start",
+		offset: 0,
 	},
 	parameters: {
-		layout: "centered",
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
-	],
 };
 
 export const Default = PopoverGroup.bind({});
 Default.args = {
 	trigger: (passthroughs) => ActionButton({
 		isSelected: true,
-		label: "Hop on pop(over)",
+		label: "Options",
 		...passthroughs,
 	}),
 	content: [
@@ -125,29 +103,29 @@ WithTip.args = {
 
 export const Nested = Template.bind({});
 Nested.args = {
-	position: "right",
 	isOpen: true,
 	trigger: (passthroughs) => ActionButton({
-		label: "Hop on pop(over)",
+		label: "Options",
 		...passthroughs,
 	}),
 	content: [
-		Menu.bind(null, {
+		(passthroughs) => Menu({
 			items: [
 				{
 					iconName: "Edit",
 					label: "Edit",
 				},
 			],
+			...passthroughs,
 		}),
-		Template.bind(null, {
-			position: "right",
+		(passthroughs) => Nested({
 			isOpen: true,
-			trigger: ActionButton.bind(null, {
+			trigger: (passthroughs) => ActionButton({
 				label: "More options",
+				...passthroughs,
 			}),
 			content: [
-				Menu.bind(null, {
+				(passthroughs) => Menu({
 					items: [
 						{
 							iconName: "Edit",
@@ -166,8 +144,10 @@ Nested.args = {
 							label: "Delete",
 						},
 					],
+					...passthroughs
 				}),
 			],
+			...passthroughs,
 		}),
 	],
 };

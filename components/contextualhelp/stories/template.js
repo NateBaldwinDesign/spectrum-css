@@ -31,6 +31,8 @@ export const Template = ({
 		>
 			${Popover({
 				isOpen: true,
+				offset: 0,
+				triggerEvent: "hover",
 				trigger: (passthrough) => ActionButton({
 					...passthrough,
 					size: "xs",

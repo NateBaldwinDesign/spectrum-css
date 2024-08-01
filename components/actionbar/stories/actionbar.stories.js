@@ -62,6 +62,12 @@ export default {
 		isFlexible: false,
 	},
 	parameters: {
+		layout: "fullscreen",
+		docs: {
+			story: {
+				inline: false,
+			}
+		},
 		actions: {
 			handles: [
 				...(Popover?.parameters?.actions?.handles ?? []),

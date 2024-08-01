@@ -33,7 +33,10 @@ export const Template = ({
 				"is-open": isOpen,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				"position": "static",
+				...customStyles,
+			})}
 		>
 			${Popover({
 				customStyles: customPopoverStyles,

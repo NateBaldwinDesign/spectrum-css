@@ -42,7 +42,8 @@
 		"@spectrum-css/dialog": "workspace:^",
 		"@spectrum-css/divider": "workspace:^",
 		"@spectrum-css/menu": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-web-components/overlay": "^0.45.0"
 	},
 	"keywords": [
 		"spectrum",

@@ -127,6 +127,7 @@ export const Template = ({
 					withTip: false,
 					position: "bottom-start",
 					isQuiet,
+					offset: 0,
 					trigger: (passthrough) => Combobox({
 						size,
 						isOpen,

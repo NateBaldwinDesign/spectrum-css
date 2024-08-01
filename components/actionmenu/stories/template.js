@@ -2,6 +2,7 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { html } from "lit";
 
 export const Template = ({
 	id = getRandomId("actionmenu"),
@@ -16,33 +17,33 @@ export const Template = ({
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
-	return Popover({
-		size,
-		isOpen,
-		withTip: false,
-		id,
-		testId: testId ?? id,
-		triggerId,
-		trigger: (passthroughs) =>
-			ActionButton({
-				...passthroughs,
-				size,
-				label,
-				hasPopup: "menu",
-				iconName,
-				id: triggerId,
-				customClasses,
-			}, context),
-		position: "bottom-start",
-		customStyles,
-		content: [
-			(passthroughs) => Menu({
-				...passthroughs,
-				items,
-				isOpen,
-				size
-			}, context)
-		],
-		...popoverArgs,
-	}, context);
+	return html`
+		${ActionButton({
+			size,
+			label,
+			hasPopup: "menu",
+			iconName,
+			id: triggerId,
+			customClasses,
+		}, context)}
+		${Popover({
+			size,
+			isOpen,
+			withTip: false,
+			id,
+			testId: testId ?? id,
+			triggerId,
+			position: "bottom-start",
+			customStyles,
+			content: [
+				(passthroughs) => Menu({
+					...passthroughs,
+					items,
+					isOpen,
+					size
+				}, context)
+			],
+			...popoverArgs,
+		}, context)}
+	`;
 };

@@ -2,6 +2,7 @@ import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { unsafeStatic } from "lit/static-html.js";
 
 /**
  * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
@@ -174,7 +175,7 @@ export const States = ({
           ...wrapperStyles,
           ...stateWrapperStyles,
         },
-        content: Template({ ...args, ...item }, context),
+        content: html`<template>${Template({ ...args, ...item }, context)}</template>`
       });
     })
   });
@@ -215,7 +216,7 @@ export const Sizes = ({
       level: 3,
       withBorder: false,
       wrapperStyles,
-      content: Template({ ...args, size }, context)
+      content: html`<template>${Template({ ...args, size }, context)}</template>`
     })),
 	});
 };
@@ -258,6 +259,32 @@ export const Variants = ({
   }
 
 	return (args, context) => {
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("[data-html-preview],[data-inner-container]").forEach((host) => {
+        console.log(host);
+        // Create an empty "constructed" stylesheet
+        const sheet = new CSSStyleSheet();
+        // Apply a rule to the sheet
+        // sheet.replaceSync("a { color: red; }");
+
+        // Create a shadow root for each host element
+        const shadow = host.attachShadow({ mode: "open" });
+        shadow.adoptedStyleSheets = [sheet];
+
+        // Clone the nested template and append it to the shadow root
+        const template = host.querySelector("template");
+        shadow.appendChild(template.content);
+    });
+  });
+
+  const templateGenerator = (args, context) => {
+    return html`${unsafeStatic(`
+      <template>
+        ${Template(args, context)}
+      </template>
+    `)}`;
+  };
+
 		return html`
       <!-- Simple, clean template preview for non-testing grid views -->
       <div
@@ -268,7 +295,7 @@ export const Variants = ({
         })}
         data-html-preview
       >
-        ${Template(args, context)}
+        ${templateGenerator(args, context)}
       </div>
 
       <!-- Start testing grid markup -->
@@ -343,7 +370,7 @@ export const Variants = ({
                       wrapperStyles: combinedStyles,
                       ...data
                     }, context),
-                  () => TestTemplate(data, context)
+                  () => html`<template>${TestTemplate(data, context)}</template>`
                 )}
               `,
             });
