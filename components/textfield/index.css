@@ -66,7 +66,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-medium);
+	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-100);
 
 	/* focus indicator */
 	--spectrum-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
@@ -141,7 +141,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-text-to-visual-75);
 	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-small);
+	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-75);
 }
 
 .spectrum-Textfield--sizeL {
@@ -162,7 +162,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-text-to-visual-200);
 	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-200);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-200);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-large);
+	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-200);
 }
 
 .spectrum-Textfield--sizeXL {
@@ -183,7 +183,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-text-to-visual-300);
 	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-300);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-300);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-extra-large);
+	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-300);
 }
 
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
