@@ -99,6 +99,7 @@ export const Template = ({
 			...globals,
 			size,
 			label: labelText,
+			isRequired,
 		}))}
 		${when(hasCharacterCount, () => html`
 				<span

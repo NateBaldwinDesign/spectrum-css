@@ -145,6 +145,7 @@ export default {
 		},
 		isRequired: {
 			name: "Required",
+			description: "Adds required attribute to to the markup, and if field label is present, adds asterisk to label",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
