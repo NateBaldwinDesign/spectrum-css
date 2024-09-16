@@ -6,7 +6,11 @@ import {
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
 
 import * as CalendarStories from "./calendar.stories";
 
@@ -15,6 +19,7 @@ import * as CalendarStories from "./calendar.stories";
 <Title of={CalendarStories} />
 <Subtitle of={CalendarStories} />
 <ComponentDetails />
+<ResourceListDetails />
 
 <Description of={CalendarStories} />
 

@@ -6,7 +6,12 @@ import {
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
+
 import * as AssetStories from "./asset.stories";
 
 <Meta of={AssetStories} title="Docs" />
@@ -14,6 +19,7 @@ import * as AssetStories from "./asset.stories";
 <Title of={AssetStories} />
 <Subtitle of={AssetStories} />
 <ComponentDetails />
+<ResourceListDetails />
 
 <Description of={AssetStories} />
 

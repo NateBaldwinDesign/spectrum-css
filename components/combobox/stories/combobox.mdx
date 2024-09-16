@@ -1,12 +1,17 @@
 import {
-  Canvas,
   ArgTypes,
+  Canvas,
   Meta,
   Description,
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
+
 import * as ComboboxStories from "./combobox.stories";
 
 <Meta of={ComboboxStories} title="Docs" />
@@ -14,6 +19,7 @@ import * as ComboboxStories from "./combobox.stories";
 <Title of={ComboboxStories} />
 <Subtitle of={ComboboxStories} />
 <ComponentDetails />
+<ResourceListDetails />
 
 <Description of={ComboboxStories} />
 

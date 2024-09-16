@@ -6,7 +6,12 @@ import {
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
+
 import * as AccordionStories from "./accordion.stories";
 
 <Meta of={AccordionStories} title="Docs" />
@@ -14,6 +19,7 @@ import * as AccordionStories from "./accordion.stories";
 <Title of={AccordionStories} />
 <Subtitle of={AccordionStories} />
 <ComponentDetails />
+<ResourceListDetails />
 
 <Description of={AccordionStories} />
 

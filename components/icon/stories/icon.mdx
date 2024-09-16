@@ -1,12 +1,25 @@
-import { Canvas, ArgTypes, Meta, Description, Title } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
 
 import * as IconStories from "./icon.stories";
 
 <Meta of={IconStories} title="Docs" />
 
 <Title of={IconStories} />
+<Subtitle of={IconStories} />
 <ComponentDetails />
+<ResourceListDetails />
 
 <Description of={IconStories} />
 

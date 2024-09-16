@@ -1,4 +1,16 @@
-import { Canvas, ArgTypes, Meta, Description, Title } from "@storybook/blocks";
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import {
+  ComponentDetails,
+  ResourceListDetails,
+  TaggedReleases,
+} from "@spectrum-css/preview/blocks";
 
 import * as DatePickerStories from "./datepicker.stories";
 
@@ -6,6 +18,8 @@ import * as DatePickerStories from "./datepicker.stories";
 
 <Title of={DatePickerStories} />
 <Description of={DatePickerStories} />
+<ComponentDetails />
+<ResourceListDetails />
 
 ## Usage notes
 
