@@ -234,6 +234,17 @@ const convertLinkTypeText = (linkType) => {
 	return linkType;
 };
 
+// checks if the page URL includes any nested component
+const isNestedComponent = (data) => {
+	const url = window.location.href;
+	const nestedComponent = data.nestedComponentName;
+
+	if (url.includes(nestedComponent)) {
+		return true;
+	}
+		return false;
+};
+
 export const ResourceLinkContent = ({data, linkType=["package", "repository", "guidelines"]}) => {
 	const packageJson = data;
 
@@ -244,17 +255,30 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 	// componentBetaName: for components with guidelines that are still on spectrum-contributions/beta site
 	let packageAltName = "";
 	let packageAltLink = "";
-	
+
+	// for instances where a single package.json generates multiple components (i.e. form, meter)
+	let nestedComponentName = (isNestedComponent(packageJson)) ? packageJson?.nestedComponentName : undefined;
+
+	const isNestedComponentPage = isNestedComponent(packageJson);
+
 	if(linkType === "package") {
 		// NPM package name and link 
 		packageName = packageJson?.name ?? undefined;
 		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
+
+		if(isNestedComponentPage && (typeof nestedComponentName !== "undefined")) {
+			packageName = packageJson?.nestedComponentName ?? undefined;
+		}
 	}
 	
 	else if (linkType === "repository") {
 		// repo name and link 
 		packageName = packageJson?.name ? packageJson?.name.split('/').pop() : undefined;
 		packageLink = (packageName && typeof packageName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageName}` : false;
+
+		if(isNestedComponentPage && (typeof nestedComponentName !== "undefined")) {
+			packageName = packageJson?.nestedComponentName ? packageJson?.nestedComponentName.split('/').pop() : undefined;
+		}
 	}
 
 	else if (linkType === "guidelines") {
@@ -268,6 +292,15 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 		if (!packageLink) {
 			packageAltLink = (packageAltName && typeof packageAltName !== "undefined") ? `https://spectrum-contributions.corp.adobe.com/page/${packageAltName}` : false;
 			packageLink = packageAltLink;
+		}
+
+		if(isNestedComponentPage && (typeof nestedComponentName !== "undefined")) {
+			packageName = packageJson?.nestedComponentName ?? undefined;
+			packageLink = (packageName && typeof packageName !== "undefined") ? `https://spectrum.adobe.com/page/${packageName}` : false;
+		} 
+		if (isNestedComponentPage && nestedComponentName === "form") {
+			packageName = packageJson?.nestedGuidelinesName;
+			packageLink = (packageName && typeof packageName !== "undefined") ? `https://spectrum.adobe.com/page/${packageName}` : false;
 		}
 	}
 
