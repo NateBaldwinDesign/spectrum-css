@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { Template } from "./template.js";
 import { ToastGroup } from "./toast.test.js";
 
@@ -40,7 +41,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Toast button"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
