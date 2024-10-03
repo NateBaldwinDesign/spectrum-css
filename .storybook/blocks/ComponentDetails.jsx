@@ -306,26 +306,6 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 	}, [cache, setCache, packageName, setnpmData, setIsLoading]);
 }
 
-/**
- * Converts the linkType to the subtitle text
- */
-const convertLinkTypeText = (linkType) => {
-	switch(linkType) {
-		case "package":
-			linkType = "npm"
-			break;
-		case "repository":
-			linkType = "GitHub"
-			break;
-		case "guidelines":
-			linkType = "Spectrum website"
-			break;
-		default:
-			break;
-	}
-	return linkType;
-};
-
 const fetchLogo = (brand) => {
 	switch(brand) {
 		case "npm":
@@ -338,7 +318,6 @@ const fetchLogo = (brand) => {
 
 	return;
 }
-
 
 export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 	if (!href) return;
@@ -413,7 +392,6 @@ export const ComponentDetails = () => {
 	fetchNpmData(packageJson.name, setnpmData, setIsLoading);
 
 	const { showLocalVersion, allVersions } = processReleaseData(storyMeta, npmData);
-
 
 	return (
 		<ResetWrapper>
