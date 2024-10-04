@@ -68,9 +68,9 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
-			"postcss-hover-media-feature": {},
+			// "postcss-hover-media-feature": {},
 			"postcss-pseudo-classes": !isProduction ? {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				restrictTo: ["focus-visible", "focus-within", "active", "disabled"],
 				allCombinations: true,
 				preserveBeforeAfter: false,
 				prefix: "is-"

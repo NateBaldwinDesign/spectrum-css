@@ -57,11 +57,6 @@
 	}
 
 	&:hover {
-		.spectrum-Rating-icon {
-			/* Make all stars colored when the component is hovered */
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-		}
-
 		/* The icon that's actually hovered is darker */
 		.spectrum-Rating-icon:hover {
 			color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
@@ -136,6 +131,7 @@
 		}
 	}
 
+	&:hover,
 	&:has(+ .spectrum-Rating-icon:hover) {
 		.spectrum-Rating-starActive {
 			display: block;
