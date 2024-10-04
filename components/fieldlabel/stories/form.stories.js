@@ -104,6 +104,7 @@ export default {
 		],
 	},
 	parameters: {
+		docsPage: false,
 		packageJson: pkgJson,
 	},
 };
