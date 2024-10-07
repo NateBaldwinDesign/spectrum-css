@@ -262,12 +262,18 @@ function processReleaseData(storyMeta, npmData) {
 }
 
 function initCache(key) {
-	const [cache, setCache] = useState(JSON.parse(localStorage.getItem(key)) ?? {});
+	const localStorage = window.localStorage.getItem(key);
+	const [cache, setCache] = useState(JSON.parse(localStorage) ?? {});
 
 	useEffect(() => {
-		try {
-			localStorage.setItem(key, JSON.stringify(cache));
-		} catch (error) {/* empty */}
+		// Don't save the cache if it's empty
+		if (Object.keys(cache).length === 0) return;
+
+		return () => {
+			try {
+				window.localStorage.setItem(key, JSON.stringify(cache));
+			} catch (error) {/* empty */}
+		};
 	}, [key, cache]);
 
 	return [cache, setCache];
@@ -346,7 +352,7 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], hasDocsPag
 
 	return (
 		<ResourceSection skipBorder={true} className="sb-unstyled">
-			{href ? 
+			{href ?
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="View guidelines"
