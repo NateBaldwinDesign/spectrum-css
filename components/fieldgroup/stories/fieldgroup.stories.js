@@ -2,7 +2,8 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
 import { Template } from "./template.js";
 
@@ -62,6 +63,27 @@ export default {
 		inputType: "radio",
 		labelPosition: "top",
 		layout: "vertical",
+		label: "Select one of the following options:",
+		items: [
+			(passthroughs, context) => Radio({
+				...passthroughs,
+				id: "apple",
+				label: "Apples are best",
+				customClasses: ["spectrum-FieldGroup-item"],
+			}, context),
+			(passthroughs, context) => Radio({
+				...passthroughs,
+				id: "banana",
+				label: "Bananas forever",
+				customClasses: ["spectrum-FieldGroup-item"],
+			}, context),
+			(passthroughs, context) => Radio({
+				...passthroughs,
+				id: "pear",
+				label: "Pears or bust",
+				customClasses: ["spectrum-FieldGroup-item"],
+			}, context),
+		],
 		isInvalid: false,
 		isRequired: false,
 		isReadOnly: false,
@@ -72,35 +94,14 @@ export default {
 				...(RadioSettings.parameters?.actions?.handles ?? [])
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };
 
 export const Default = FieldGroupSet.bind({});
-Default.args = {
-	label: "Select one of the following options:",
-	items: [
-		(passthroughs, context) => Radio({
-			...passthroughs,
-			id: "apple",
-			label: "Apples are best",
-			customClasses: ["spectrum-FieldGroup-item"],
-		}, context),
-		(passthroughs, context) => Radio({
-			...passthroughs,
-			id: "banana",
-			label: "Bananas forever",
-			customClasses: ["spectrum-FieldGroup-item"],
-		}, context),
-		(passthroughs, context) => Radio({
-			...passthroughs,
-			id: "pear",
-			label: "Pears or bust",
-			customClasses: ["spectrum-FieldGroup-item"],
-		}, context),
-	],
-};
+Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = FieldGroupSet.bind({});
