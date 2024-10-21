@@ -40,15 +40,11 @@
 			"executor": "nx:run-commands",
 			"inputs": [
 				"core",
-				"tools",
-				"{workspaceRoot}/tasks/component-builder.js",
-				"!{projectRoot}/stories/*.js",
-				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
+					"spectrum-css build ${NX_TASK_TARGET_PROJECT}"
 				]
 			},
 			"outputs": [
@@ -151,12 +147,12 @@
 			"inputs": [
 				"core",
 				"tools",
-				"{workspaceRoot}/tasks/component-report.js",
+				{ "externalDependencies": ["postcss", "@spectrum-tools/css-cli"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"spectrum-css report ${projectRoot}/index.css --output ${projectRoot}/metadata"
 				]
 			},
 			"outputs": [

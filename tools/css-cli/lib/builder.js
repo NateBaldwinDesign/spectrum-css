@@ -13,26 +13,17 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync, mkdirSync, statSync } from "fs";
+import { basename, dirname, join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const postcss = require("postcss");
-const postcssrc = require("postcss-load-config");
-const prettier = require("prettier");
+import postcss from "postcss";
+import postcssrc from "postcss-load-config";
+import { format } from "prettier";
 
-require("colors");
+import "colors";
 
-const {
-	dirs,
-	relativePrint,
-	bytesToSize,
-	getPackageFromPath,
-	cleanFolder,
-	validateComponentName,
-	fetchContent,
-	copy,
-} = require("./utilities.js");
+import { bytesToSize, cleanFolder, copy, dirs, fetchContent, getPackageFromPath, relativePrint, validateComponentName } from "./utilities.js";
 
 /**
  * Process the provided CSS input and write out to a file
@@ -45,13 +36,13 @@ const {
  * @param {import('postcss-load-config').ConfigContext} [options.postCSSOptions]
  * @returns {Promise<(string|void)[]>} Returns the console output for the build
  */
-async function processCSS(
+export async function processCSS(
 	content,
 	input,
 	output,
 	{
 		cwd,
-		configPath = __dirname,
+		configPath = process.cwd(),
 		...postCSSOptions
 	} = {},
 ) {
@@ -85,7 +76,7 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	const formatted = await prettier.format(result.css, {
+	const formatted = await format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
@@ -96,11 +87,11 @@ async function processCSS(
 	// If no output is provided, return the formatted content
 	if (!output) return Promise.resolve(formatted);
 
-	if (!fs.existsSync(path.dirname(output))) {
-		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
+	if (!existsSync(dirname(output))) {
+		await fsp.mkdir(dirname(output), { recursive: true }).catch((err) => {
 			if (!err) return;
 			console.log(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
+				`${"✗".red}  problem making the ${relativePrint(dirname(output), { cwd }).yellow} directory`,
 			);
 			return Promise.reject(err);
 		});
@@ -110,7 +101,7 @@ async function processCSS(
 		fsp
 			.writeFile(output, formatted)
 			.then(() => {
-				const stats = fs.statSync(output);
+				const stats = statSync(output);
 				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
 			})
 			.catch((err) => {
@@ -127,7 +118,7 @@ async function processCSS(
 			fsp
 				.writeFile(`${output}.map`, result.map.toString().trimStart())
 				.then(() => {
-					const stats = fs.statSync(output);
+					const stats = statSync(output);
 					return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
 				})
 				.catch((err) => {
@@ -150,11 +141,12 @@ async function processCSS(
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
-	const indexSourceCSS = path.join(cwd, "index.css");
+export async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
+	const indexSourceCSS = join(cwd, "index.css");
+	console.log(indexSourceCSS);
 
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(indexSourceCSS)) return;
+	if (!existsSync(indexSourceCSS)) return;
 
 	const content = await fsp.readFile(indexSourceCSS, "utf8");
 
@@ -163,11 +155,11 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	}
 
 	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
+	if (!existsSync(join(cwd, "dist"))) {
+		mkdirSync(join(cwd, "dist"));
 	}
 
-	const indexOutputPath = path.join(cwd, "dist", "index.css");
+	const indexOutputPath = join(cwd, "dist", "index.css");
 
 	return Promise.all([
 		processCSS(content, indexSourceCSS, indexOutputPath, {
@@ -179,13 +171,13 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			stripLocalSelectors: false,
 		}).then(async (reports) => {
 			// Copy index.css to index-vars.css for backwards compat, log as deprecated
-			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
+			return copy(indexOutputPath, join(cwd, "dist/index-vars.css"), { cwd })
 				.then(r => [r, ...reports]);
 		}),
 		processCSS(
 			content,
 			indexSourceCSS,
-			path.join(cwd, "dist", "index-base.css"),
+			join(cwd, "dist", "index-base.css"),
 			{
 				cwd,
 				clean,
@@ -204,7 +196,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
+export async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
 
@@ -220,11 +212,11 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				new Error(`No content found for ${relativePrint(input, { cwd })}`),
 			);
 
-		const theme = path.basename(input, ".css");
+		const theme = basename(input, ".css");
 		return processCSS(
 			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
+			join(cwd, input),
+			join(cwd, "dist", input),
 			{
 				cwd,
 				clean,
@@ -245,8 +237,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
 		processCSS(
 			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
+			join(cwd, "index.css"),
+			join(cwd, "dist", "index-theme.css"),
 			{
 				cwd,
 				clean,
@@ -269,13 +261,14 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
  * @param {boolean} [config.clean=false] - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function main({
+export async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
 } = {}) {
+	console.log({ componentName, cwd, clean });
 	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
+		cwd = join(dirs.components, componentName);
 	}
 
 	if (!componentName) {
@@ -330,7 +323,3 @@ async function main({
 			process.exit(1);
 		});
 }
-
-exports.processCSS = processCSS;
-exports.fetchContent = fetchContent;
-exports.default = main;

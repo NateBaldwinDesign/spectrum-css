@@ -12,24 +12,18 @@
  */
 
 /* eslint-disable no-console */
-const fs = require("fs");
+import fs, { existsSync, mkdirSync } from "fs";
+import { join, relative } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const postcss = require("postcss");
-const prettier = require("prettier");
+import { parse } from "postcss";
+import { format } from "prettier";
 
-require("colors");
+import "colors";
 
-const {
-	dirs,
-	extractProperties,
-	getAllComponentNames,
-	getPackageFromPath,
-	writeAndReport,
-} = require("./utilities.js");
+import { dirs, extractProperties, getAllComponentNames, getPackageFromPath, writeAndReport } from "./utilities.js";
 
-const { processCSS } = require("./component-builder.js");
+import { processCSS } from "./builder.js";
 
 /**
  * Extract custom property modifers to report
@@ -42,7 +36,7 @@ const { processCSS } = require("./component-builder.js");
  * @param {string} [options.cwd=process.cwd()]
  * @returns Promise<string|string[]|void>
  */
-async function extractModifiers(
+export async function extractModifiers(
 	content,
 	{
 		componentName,
@@ -60,12 +54,12 @@ async function extractModifiers(
 	const meta = extractProperties(content, dataModel);
 
 	if (sourcePath) {
-		meta.sourceFile = path.relative(cwd, sourcePath);
+		meta.sourceFile = relative(cwd, sourcePath);
 	}
 
 	// Extract all selectors from the source file
 	const selectors = new Set();
-	const root = postcss.parse(content);
+	const root = parse(content);
 	root.walkRules((rule) => {
 		if (rule.selectors) {
 			rule.selectors.forEach((selector) => {
@@ -135,13 +129,13 @@ async function extractModifiers(
  * @param {boolean} [config.clean=false] - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function main({
+export async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
 } = {}) {
 	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
+		cwd = join(dirs.components, componentName);
 	}
 
 	if (!componentName) {
@@ -157,9 +151,9 @@ async function main({
 	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	const sourceCSS = path.join(cwd, "index.css");
+	const sourceCSS = join(cwd, "index.css");
 
-	if (!fs.existsSync(sourceCSS)) {
+	if (!existsSync(sourceCSS)) {
 		console.log(`\n\n${key} 🔍`);
 		console.log(`${"".padStart(30, "-")}`);
 		console.log(`No source CSS file found at ${sourceCSS}`);
@@ -197,13 +191,13 @@ async function main({
 	);
 
 	// Create the metadata directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "metadata"))) {
-		fs.mkdirSync(path.join(cwd, "metadata"));
+	if (!existsSync(join(cwd, "metadata"))) {
+		mkdirSync(join(cwd, "metadata"));
 	}
 
 	return Promise.all([
 		writeAndReport(
-			await prettier.format(
+			await format(
 				`${[
 					"| Modifiable custom properties |",
 					"| --- |",
@@ -211,11 +205,11 @@ async function main({
 				].join("\n")}\n`,
 				{ parser: "markdown" },
 			),
-			path.join(cwd, "metadata/mods.md"),
+			join(cwd, "metadata/mods.md"),
 			{ cwd },
 		),
 		writeAndReport(
-			await prettier.format(
+			await format(
 				JSON.stringify({
 					sourceFile: meta.sourceFile,
 					selectors: meta.selectors,
@@ -228,7 +222,7 @@ async function main({
 				}, null, 2),
 				{ parser: "json" },
 			),
-			path.join(cwd, "metadata/metadata.json"),
+			join(cwd, "metadata/metadata.json"),
 			{ cwd },
 		),
 	])
@@ -265,6 +259,3 @@ async function main({
 			process.exit(1);
 		});
 }
-
-exports.extractModifiers = extractModifiers;
-exports.default = main;

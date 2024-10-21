@@ -4398,6 +4398,44 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-tools/css-cli@workspace:^, @spectrum-tools/css-cli@workspace:tools/css-cli":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-tools/css-cli@workspace:tools/css-cli"
+  dependencies:
+    cssnano: "npm:^7.0.3"
+    cssnano-preset-advanced: "npm:^7.0.6"
+    postcss: "npm:^8.4.45"
+    postcss-cli: "npm:^11.0.0"
+    postcss-combininator: "workspace:^"
+    postcss-extend: "npm:^1.0.5"
+    postcss-hover-media-feature: "npm:^1.0.2"
+    postcss-import: "npm:^16.1.0"
+    postcss-licensing: "npm:^2.0.0"
+    postcss-load-config: "npm:^5.1.0"
+    postcss-preset-env: "npm:^9.5.13"
+    postcss-pseudo-classes: "npm:^0.4.0"
+    postcss-reporter: "npm:^7.1.0"
+    postcss-rgb-mapping: "workspace:^"
+    postcss-selector-replace: "npm:^1.0.2"
+    postcss-sorting: "npm:^8.0.2"
+    postcss-splitinator: "workspace:^"
+    postcss-values-parser: "npm:^6.0.2"
+    prettier: "npm:^3.2.5"
+    stylelint: "npm:^16.9.0"
+    stylelint-config-standard: "npm:^36.0.1"
+    stylelint-header: "npm:^2.0.1"
+    stylelint-high-performance-animation: "npm:^1.10.0"
+    stylelint-order: "npm:^6.0.4"
+    stylelint-selector-bem-pattern: "npm:^4.0.1"
+    stylelint-use-logical: "npm:^2.1.2"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    postcss: ">=8"
+  bin:
+    spectrum-css: ./index.js
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-tools/documentation@workspace:site":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/documentation@workspace:site"
@@ -17152,6 +17190,7 @@ __metadata:
     "@spectrum-css/quickaction": "npm:^3.1.1"
     "@spectrum-css/searchwithin": "npm:^5.1.3"
     "@spectrum-css/splitbutton": "npm:^8.1.2"
+    "@spectrum-tools/css-cli": "workspace:^"
     at-rule-packer: "npm:^0.4.2"
     autoprefixer: "npm:^10.4.19"
     colors: "npm:^1.4.0"
@@ -17175,21 +17214,6 @@ __metadata:
     nx: "npm:^19.8.2"
     open: "npm:^10.1.0"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.4.45"
-    postcss-combininator: "workspace:^"
-    postcss-extend: "npm:^1.0.5"
-    postcss-hover-media-feature: "npm:^1.0.2"
-    postcss-import: "npm:^16.1.0"
-    postcss-licensing: "npm:^2.0.0"
-    postcss-load-config: "npm:^5.1.0"
-    postcss-preset-env: "npm:^9.5.13"
-    postcss-pseudo-classes: "npm:^0.4.0"
-    postcss-reporter: "npm:^7.1.0"
-    postcss-rgb-mapping: "workspace:^"
-    postcss-selector-replace: "npm:^1.0.2"
-    postcss-sorting: "npm:^8.0.2"
-    postcss-splitinator: "workspace:^"
-    postcss-values-parser: "npm:^6.0.2"
     prettier: "npm:^3.2.5"
     rimraf: "npm:^6.0.1"
     stylelint: "npm:^16.9.0"
