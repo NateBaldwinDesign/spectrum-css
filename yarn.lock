@@ -5564,7 +5564,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:^14.0.0-next.7, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:^14.0.0-next.7":
+  version: 14.6.0
+  resolution: "@spectrum-css/tokens@npm:14.6.0"
+  checksum: 10c0/62343030d55fce9de192ca0d1e13bd1ee147c1aba45ecf6b8db27c1740865f9645af8b0b260f0723ce295af2b83cd2014962d62af61b8827a548bc80be9f1012
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
