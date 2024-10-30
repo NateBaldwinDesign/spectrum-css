@@ -56,11 +56,21 @@ export default {
 			options: ["s", "m", "l"],
 			control: "select",
 		},
+		hasButtons: {
+			name: "Show button group",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
 		orientation: "vertical",
-		size: "m"
+		size: "m",
+		hasButtons: true
 	},
 	parameters: {
 		actions: {
