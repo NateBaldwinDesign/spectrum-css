@@ -1357,8 +1357,8 @@
   --spectrum-in-field-stepper-to-end-medium:3px;
   --spectrum-in-field-stepper-to-end-large:4px;
   --spectrum-number-field-minimum-width-multiplier:1.25;
-  --spectrum-takeover-dialog-height:1.00em;
-  --spectrum-takeover-dialog-width:1.00em;
+  --spectrum-takeover-dialog-height:100%;
+  --spectrum-takeover-dialog-width:100%;
   --spectrum-corner-radius-0:0px;
   --spectrum-corner-radius-75:3px;
   --spectrum-corner-radius-100:4px;
