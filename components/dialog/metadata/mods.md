@@ -5,6 +5,7 @@
 | `--mod-standard-dialog-description-font-weight`         |
 | `--mod-standard-dialog-description-line-height`         |
 | `--mod-standard-dialog-description-text-color`          |
+| `--mod-standard-dialog-header-content-font-size`        |
 | `--mod-standard-dialog-heading-font-size`               |
 | `--mod-standard-dialog-heading-font-weight`             |
 | `--mod-standard-dialog-heading-line-height`             |
@@ -18,4 +19,5 @@
 | `--mod-standard-dialog-spacing-edge-to-close-button`    |
 | `--mod-standard-dialog-spacing-footer-to-button-group`  |
 | `--mod-standard-dialog-spacing-grid-padding`            |
+| `--mod-standard-dialog-spacing-title-to-description`    |
 | `--mod-standard-dialog-spacing-title-to-header-content` |
