@@ -132,9 +132,6 @@ governing permissions and limitations under the License.
 	color: var(--mod-standard-dialog-heading-text-color, var(--spectrum-standard-dialog-heading-text-color));
 	outline: none; /* Hide focus outline */
 
-	/* prevent the heading/title from moving out of the header element if additional content is long */
-	min-inline-size: 40%;
-
 	&:has(~ .spectrum-Dialog-heading--noHeader) {
 		margin-inline-end: 0;
 	}
@@ -150,12 +147,12 @@ governing permissions and limitations under the License.
 	grid-area: header;
 	display: flex;
 	max-inline-size: 100%;
-	margin-block-end: var(--spectrum-standard-dialog-spacing-title-to-description);
+	margin-block-end: var(--mod-standard-dialog-spacing-title-to-description, var(--spectrum-standard-dialog-spacing-title-to-description));
 	gap: var(--mod-standard-dialog-spacing-title-to-header-content, var(--spectrum-standard-dialog-spacing-title-to-header-content));
 
 	/* Without this, buttons will be stretched */
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: space-between;
 
 	box-sizing: border-box;
 
@@ -165,7 +162,7 @@ governing permissions and limitations under the License.
 	> .spectrum-Dialog-header-content {
 		max-inline-size: fit-content;
 		flex: 1 1 100%;
-		font-size: var(--spectrum-standard-dialog-header-content-font-size);
+		font-size: var(--mod-standard-dialog-header-content-font-size, var(--spectrum-standard-dialog-header-content-font-size));
 		text-wrap: pretty;
 	}
 }
@@ -201,7 +198,6 @@ governing permissions and limitations under the License.
 
 	.spectrum-Dialog-footer-content {
 		/* this attempts to give as much space as possible for the button group, particularly to avoid stacking on mobile. Some sizes still may have to stack. */
-		max-inline-size: calc(50% - var(--mod-standard-dialog-spacing-footer-to-button-group, var(--spectrum-standard-dialog-spacing-footer-to-button-group)));
 		flex: 1 1 100%;
 	}
 
@@ -215,8 +211,10 @@ governing permissions and limitations under the License.
 	grid-area: buttonGroup;
 
 	& > .spectrum-ButtonGroup {
-		/* to override ButtonGroup's justify-content: normal and/or not having footer content */
-		justify-content: flex-end;
+		/* to override ButtonGroup's justify-content: normal and/or not having footer content,
+    as well as prevent ButtonGroup from wrapping. */
+		--mod-buttongroup-justify-content: flex-end;
+		--mod-buttongroup-flex-wrap: nowrap;
 	}
 }
 

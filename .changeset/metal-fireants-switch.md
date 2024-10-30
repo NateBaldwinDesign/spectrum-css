@@ -14,6 +14,8 @@ Mod properties are either "new," have been renamed to reflect the respective dia
 
 _New Mods_
 `--mod-standard-dialog-spacing-title-to-header-content`
+`--mod-standard-dialog-spacing-title-to-description`
+`--mod-standard-dialog-header-content-font-size`
 
 _Renamed Mods_
 `--mod-dialog-confirm-small-width` > `--mod-standard-dialog-max-width-small`
