@@ -36,15 +36,15 @@ export default {
 				disable: true,
 			},
 		},
-		orientation: {
-			name: "Orientation",
-			type: { name: "string" },
+		isHorizontal: {
+			name: "Horizontal orientation",
+			description: "The default content orientation is vertical. Add the horizontal class to align the illustration to the left.",
+			type: { name: "boolean" },
 			table: {
-				type: { summary: "string" },
+				type: { summary: "boolean" },
 				category: "Component",
 			},
-			options: ["vertical", "horizontal"],
-			control: "select",
+			control: "boolean",
 		},
 		size: {
 			name: "Size",
@@ -68,7 +68,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
-		orientation: "vertical",
+		isHorizontal: false,
 		size: "m",
 		hasButtons: true
 	},
