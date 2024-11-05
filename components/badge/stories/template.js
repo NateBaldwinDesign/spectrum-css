@@ -1,3 +1,4 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -70,3 +71,12 @@ export const PreviewSets = (variants, args, context) => html`
 		`)}
 	</div>
 `;
+
+export const ContentOptions = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Template(args, context)}
+		${Template({ ...args, iconName: undefined }, context)}
+		${Template({ ...args, label: undefined }, context)}
+	`
+});
