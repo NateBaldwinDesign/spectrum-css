@@ -68,6 +68,7 @@ export default {
 export const Default = CoachMarkGroup.bind({});
 Default.args = {};
 
+/** Coach marks can contain images that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations. */
 export const WithMedia = Template.bind({});
 WithMedia.tags = ["!dev"];
 WithMedia.args = {
