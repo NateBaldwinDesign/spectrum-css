@@ -110,6 +110,7 @@ export const Default = (args) => html`
  * An accent color class can be used on elements of the illustration SVG.
  */
 export const AccentColor = Template.bind({});
+AccentColor.tags = ["!dev"];
 AccentColor.args = {
 	heading: "Drag and drop your file",
 	description: [

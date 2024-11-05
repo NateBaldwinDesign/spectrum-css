@@ -8,12 +8,14 @@
 | `--mod-illustrated-message-description-line-height`    |
 | `--mod-illustrated-message-description-pointer-events` |
 | `--mod-illustrated-message-description-position`       |
+| `--mod-illustrated-message-description-to-action`      |
 | `--mod-illustrated-message-description-z-index`        |
 | `--mod-illustrated-message-display`                    |
 | `--mod-illustrated-message-heading-to-description`     |
-| `--mod-illustrated-message-illustration-accent-color`  |
+| `--mod-illustrated-message-horizontal-maximum-width`   |
 | `--mod-illustrated-message-illustration-color`         |
 | `--mod-illustrated-message-illustration-size`          |
+| `--mod-illustrated-message-illustration-to-content`    |
 | `--mod-illustrated-message-illustration-to-heading`    |
 | `--mod-illustrated-message-pointer-events`             |
 | `--mod-illustrated-message-title-color`                |
