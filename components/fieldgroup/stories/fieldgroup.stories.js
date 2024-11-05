@@ -15,6 +15,12 @@ import { Template } from "./template.js";
  * layout separately from the label. Help text may or may not appear below a field group and is
  * necessary when denoting invalid checkbox fields, invalid radio button fields, and required
  * fields. Invalid radio buttons and checkboxes are signified by negative help text.
+ *
+ * A group of fields, usually Radios or Checkboxes.
+Field group incorporates the Help text component which may appear below a Field group.
+Help text is necessary to denote invalid checkbox fields, invalid radio button fields, and required fields.
+Invalid radio buttons are signified only by negative Help text.
+Invalid checkboxes are signified by negative Help text and the negative/invalid color on the input box.
  */
 export default {
 	title: "Field group",
