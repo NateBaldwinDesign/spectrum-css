@@ -70,7 +70,8 @@ export default {
 		rootClass: "spectrum-IllustratedMessage",
 		isHorizontal: false,
 		size: "m",
-		hasButtons: true
+		hasButtons: true,
+		useAccentColor: false,
 	},
 	parameters: {
 		actions: {
@@ -82,29 +83,13 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div>
-		${Template({
-			...args,
-			heading: "Error 404: Page not found",
-			description: [
-				"This page isn't available. Try checking the URL or visit a different page.",
-			],
-			useAccentColor: false,
-		})}
-		${window.isChromatic() ?
-			Template({
-				...args,
-				heading: "Error 404: This is not the page you're looking for",
-				description: [
-					"This page isn't available.",
-				],
-				useAccentColor: false,
-			})
-			: null
-		}
-	</div>
-`;
+export const Default = Template.bind({});
+Default.args = {
+	heading: "Error 404: Page not found",
+	description: [
+		"This page isn't available. Try checking the URL or visit a different page.",
+	],
+};
 
 /**
  * An accent color class can be used on elements of the illustration SVG.
