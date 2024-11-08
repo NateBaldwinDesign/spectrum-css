@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
 	--spectrum-standard-dialog-background-color: var(--spectrum-background-layer-2-color);
 
 	/* Spacing */
-	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-500);
+	--spectrum-standard-dialog-padding: var(--spectrum-standard-dialog-spacing-edge-to-content);
 	--spectrum-standard-dialog-spacing-title-to-description: var(--spectrum-spacing-300);
 	--spectrum-standard-dialog-spacing-description-to-footer: var(--spectrum-spacing-500);
 	--spectrum-standard-dialog-spacing-title-to-header-content: var(--spectrum-spacing-400);
@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
 	--spectrum-standard-dialog-spacing-footer-to-button-group: var(--spectrum-spacing-400);
 
 	/* Grid */
-	--spectrum-standard-dialog-spacing-grid-padding: var(--spectrum-standard-dialog-spacing-edge-to-content);
+	--spectrum-standard-dialog-spacing-grid-padding: var(--spectrum-standard-dialog-padding);
 	--spectrum-standard-dialog-spacing-edge-to-close-button: var(--spectrum-spacing-200);
 
 	/* Hero */
@@ -70,10 +70,6 @@ governing permissions and limitations under the License.
 	outline: none;
 	border-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
 	overflow: hidden;
-
-	.spectrum--large & {
-		--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
-	}
 }
 
 .spectrum-Dialog--sizeS {
@@ -222,6 +218,7 @@ governing permissions and limitations under the License.
 		auto
 		1fr
 		auto
+		var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end)
 		minmax(0, var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end))
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-rows:
@@ -232,12 +229,12 @@ governing permissions and limitations under the License.
 		auto
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-areas:
-		"hero hero    hero    hero     hero        hero"
-		".    .       .       .        closeButton closeButton"
-		".    heading header  header   closeButton closeButton"
-		".    content content content  content     ."
-		".    footer  footer  footer   footer      ."
-		".    .       .       .        .           .";
+		"hero hero    hero    hero     hero     hero        hero"
+		".    .       .       .        .        closeButton closeButton"
+		".    heading header  header   .        closeButton closeButton"
+		".    content content content  content  content     ."
+		".    footer  footer  footer   footer   footer      ."
+		".    .       .       .        .        .           .";
 
 	.spectrum-Dialog-footer {
 		grid-area: footer;
