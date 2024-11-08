@@ -74,6 +74,8 @@
   --spectrum-dialog-confirm-description-text-size:15px;
   --spectrum-dialog-confirm-padding-grid:24px;
 
+  --spectrum-standard-dialog-spacing-edge-to-content:var(--spectrum-spacing-400);
+
   --spectrum-datepicker-initial-width:160px;
   --spectrum-datepicker-generic-padding:15px;
   --spectrum-datepicker-dash-line-height:30px;
