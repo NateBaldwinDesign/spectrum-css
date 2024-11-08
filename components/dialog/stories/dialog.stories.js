@@ -53,18 +53,22 @@ export default {
 				category: "Content",
 			},
 			control: { type: "text" },
-			if: { arg: "hasFooter", truthy: true },
+			if: { arg: "layout", eq: "default" },
 		},
 		hasCheckbox: {
 			name: "Has checkbox",
-			description: "Adds a checkbox to the footer content.",
+			description: "Adds a checkbox to the footer content. Currently only supported in the default layout.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Content",
 			},
 			control: { type: "boolean" },
-			if: { arg: "hasFooter", truthy: true },
+			// TODO: when storybook adds support for multiple conditionals, we could have some of
+			// our controls display when more than one arg is met. For instance,
+			// hasCheckbox ideally would appear when layout: "default", AND footer is truthy.
+			// https://github.com/storybookjs/storybook/discussions/18542
+			if: { arg: "layout", eq: "default" },
 		},
 		size: {
 			name: "Size",
@@ -273,10 +277,6 @@ that are imported above, but commented out.
  * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
  */
 export const Fullscreen = Template.bind({});
-Fullscreen.argTypes = {
-	hasCheckbox: { table: { disable: true } },
-	footer:  { table: { disable: true } },
-};
 Fullscreen.args = {
 	...Default.args,
 	layout: "fullscreen",
@@ -290,10 +290,6 @@ Fullscreen.parameters = {
  */
 export const FullscreenTakeover = Template.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
-FullscreenTakeover.argTypes = {
-	hasCheckbox: { table: { disable: true } },
-	footer:  { table: { disable: true } },
-};
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
 };
