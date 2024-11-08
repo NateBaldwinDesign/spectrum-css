@@ -72,9 +72,6 @@ export const Template = ({
 							})}
 						</span>
 					`,
-					() => html`
-						<span class="${rootClass}-heading--noHeader"></span>
-					`
 				)}
 				</div>
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>

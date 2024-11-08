@@ -135,10 +135,6 @@ governing permissions and limitations under the License.
 	line-height: var(--mod-standard-dialog-heading-line-height, var(--spectrum-standard-dialog-heading-line-height));
 	color: var(--mod-standard-dialog-heading-text-color, var(--spectrum-standard-dialog-heading-text-color));
 	outline: none; /* Hide focus outline */
-
-	&:has(~ .spectrum-Dialog-heading--noHeader) {
-		margin-inline-end: 0;
-	}
 }
 
 .spectrum-Dialog-heading--noHeader {
@@ -245,11 +241,6 @@ governing permissions and limitations under the License.
 
 	.spectrum-Dialog-footer {
 		grid-area: footer;
-	}
-
-	/* remove the margin on the title/heading if there's not extra header content */
-	.spectrum-Dialog-heading:has(+ .spectrum-Dialog-heading--noHeader) {
-		margin-inline-end: 0;
 	}
 }
 
