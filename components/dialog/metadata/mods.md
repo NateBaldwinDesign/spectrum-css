@@ -1,5 +1,6 @@
 | Modifiable custom properties                            |
 | ------------------------------------------------------- |
+| `--mod-standard-dialog-background-color`                |
 | `--mod-standard-dialog-border-radius`                   |
 | `--mod-standard-dialog-description-font-size`           |
 | `--mod-standard-dialog-description-font-weight`         |
