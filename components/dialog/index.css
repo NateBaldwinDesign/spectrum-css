@@ -133,11 +133,6 @@ governing permissions and limitations under the License.
 	outline: none; /* Hide focus outline */
 }
 
-.spectrum-Dialog-heading--noHeader {
-	grid-area: header;
-	padding-inline-end: 0;
-}
-
 /* the container for the heading and any additional header content */
 .spectrum-Dialog-header {
 	grid-area: header;
