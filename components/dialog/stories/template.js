@@ -182,6 +182,9 @@ export const Template = ({
 				isOpen,
 				content: Dialog,
 				variant: layout,
+				customStyles: {
+					"--mod-modal-background-color": "transparent"
+				},
 			}, context)}
 		`;
 	}
