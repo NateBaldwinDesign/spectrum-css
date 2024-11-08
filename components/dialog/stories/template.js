@@ -28,6 +28,7 @@ export const Template = ({
 	id,
 	size = "m",
 	layout,
+	hasHeroImage = false,
 	heroImageUrl,
 	customStyles = {},
 } = {}, context = {}) => {
@@ -50,11 +51,11 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 		> 
 			<div class="${rootClass}-grid">
-				${when(typeof heroImageUrl !== "undefined", () =>
+				${when(hasHeroImage, () =>
 					html`
 						<div 
 							class="spectrum-Dialog-hero"
-							style="background-image:url(${heroImageUrl})">
+							style="background-image:url(${heroImageUrl ? heroImageUrl : "example-card-portrait.png"})">
 						</div>
 					`
 				)}

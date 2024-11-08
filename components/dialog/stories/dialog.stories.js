@@ -116,16 +116,29 @@ export default {
 			},
 			control: "boolean",
 		},
+		hasHeroImage: {
+			name: "Has hero image",
+			type: { name: "boolean" },
+			description: "Adds a cover image to the header of a dialog.",
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: "boolean",
+			if: { arg: "layout", eq: "default" },
+		},
 		heroImageUrl: {
 			name: "Hero Image",
 			type: { name: "string" },
-			description: "Adds a cover image to the header of a dialog.",
+			description: "Select a cover image for the hero section of a dialog.",
+			defaultValue: "example-card-portrait.png",
 			table: {
 				type: { summary: "string" },
 				category: "Content",
+				defaultValue: { summary: "example-card-portrait.png" },
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-			if: { arg: "layout", eq: "default" },
+			if: { arg: "hasHeroImage", truthy: true },
 		},
 	},
 	args: {
@@ -138,6 +151,7 @@ export default {
 		size: "m",
 		layout: "default",
 		hasCheckbox: true,
+		hasHeroImage: false,
 	},
 	parameters: {
 		actions: {
@@ -233,7 +247,6 @@ WithHero.parameters = {
 WithHero.args = {
 	...Default.args,
 	hasHeroImage: true,
-	heroImageUrl: "example-card-portrait.png",
 };
 
 /**
