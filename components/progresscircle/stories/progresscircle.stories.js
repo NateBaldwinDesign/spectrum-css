@@ -30,21 +30,30 @@ export default {
 		},
 		staticColor: {
 			name: "Static color",
+			description: "Variants that can be used when the progress circle needs to be placed on top of a colored background or a visual.",
 			type: { name: "string" },
 			table: {
-				disable: true,
 				type: { summary: "string" },
-				category: "Advanced",
+				category: "Component",
+
 			},
-			options: ["white"],
+			options: ["white", "black"],
 			control: "select",
 		},
+		value: {
+			control: {
+				type: "range",
+				min: 0,
+				max: 100
+			}
+		}
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
 		staticColor: undefined,
+		value: 43
 	},
 	parameters: {
 		actions: {
@@ -53,6 +62,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		layout: "centered"
 	},
 };
 
