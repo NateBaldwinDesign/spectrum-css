@@ -84,6 +84,7 @@ export const Picker = ({
 					...globals,
 					size: "s",
 					isIndeterminate: true,
+					isInField: true
 				})
 			)}
 			${when(isInvalid && !isLoading, () =>
