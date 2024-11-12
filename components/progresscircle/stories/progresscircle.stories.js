@@ -66,7 +66,7 @@ export default {
 	},
 };
 
-const ProgressCircleGroup = (args) => html`
+export const ProgressCircleGroup = (args) => html`
 	${window.isChromatic() ? html`
 		${Template(args)}
 		${Template({
