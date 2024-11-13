@@ -13,6 +13,7 @@
 | `--mod-illustrated-message-display`                    |
 | `--mod-illustrated-message-heading-to-description`     |
 | `--mod-illustrated-message-horizontal-maximum-width`   |
+| `--mod-illustrated-message-illustration-accent-color`  |
 | `--mod-illustrated-message-illustration-color`         |
 | `--mod-illustrated-message-illustration-size`          |
 | `--mod-illustrated-message-illustration-to-content`    |
