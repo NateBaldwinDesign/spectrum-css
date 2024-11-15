@@ -19,11 +19,11 @@ governing permissions and limitations under the License.
 	--spectrum-standard-dialog-heading-font-weight: var(--spectrum-title-sans-serif-font-weight);
 	--spectrum-standard-dialog-heading-font-size: var(--spectrum-standard-dialog-title-font-size);
 	--spectrum-standard-dialog-heading-font-style: var(--spectrum-title-sans-serif-font-style);
-	--spectrum-standard-dialog-heading-font-family: var(--spectrum-title-sans-serif-font-family);
+	--spectrum-standard-dialog-heading-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-standard-dialog-description-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-standard-dialog-description-font-size: var(--spectrum-standard-dialog-body-font-size);
 	--spectrum-standard-dialog-description-font-style: var(--spectrum-body-sans-serif-font-style);
-	--spectrum-standard-dialog-description-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-standard-dialog-description-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-standard-dialog-header-content-font-size: var(--spectrum-standard-dialog-body-font-size);
 
 	--spectrum-standard-dialog-heading-line-height: var(--spectrum-title-line-height);
