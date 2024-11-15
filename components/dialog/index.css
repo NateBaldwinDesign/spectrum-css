@@ -213,7 +213,6 @@ governing permissions and limitations under the License.
 		auto
 		1fr
 		auto
-		var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end)
 		minmax(0, var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end))
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-rows:
@@ -224,12 +223,12 @@ governing permissions and limitations under the License.
 		auto
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-areas:
-		"hero hero    hero    hero     hero     hero        hero"
-		".    .       .       .        .        closeButton closeButton"
-		".    heading header  header   .        closeButton closeButton"
-		".    content content content  content  content     ."
-		".    footer  footer  footer   footer   footer      ."
-		".    .       .       .        .        .           .";
+		"hero hero    hero    hero     hero        hero"
+		".    .       .       .        closeButton closeButton"
+		".    heading header  header   closeButton closeButton"
+		".    content content content  content     ."
+		".    footer  footer  footer   footer      ."
+		".    .       .       .        .           .";
 
 	.spectrum-Dialog-footer {
 		grid-area: footer;
