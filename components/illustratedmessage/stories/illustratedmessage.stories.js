@@ -1,6 +1,4 @@
-import { html } from "lit";
 
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 import { Template } from "./template";
 
@@ -11,15 +9,6 @@ export default {
 	title: "Components/Illustrated message",
 	component: "IllustratedMessage",
 	argTypes: {
-		useAccentColor: {
-			name: "Illustration accent color",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -31,10 +20,12 @@ export default {
 		},
 		description: {
 			name: "Description",
+			type: { name: "string" },
 			table: {
+				type: { summary: "string" },
 				category: "Content",
-				disable: true,
 			},
+			control: "text",
 		},
 		isHorizontal: {
 			name: "Horizontal orientation",
@@ -71,7 +62,8 @@ export default {
 		isHorizontal: false,
 		size: "m",
 		hasButtons: true,
-		useAccentColor: false,
+		heading: "Error 404: Page not found",
+		description: "This page isn't available. Try checking the URL or visit a different page.",
 	},
 	parameters: {
 		actions: {
@@ -80,28 +72,18 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		layout: "centered"
 	},
 };
 
 export const Default = Template.bind({});
 Default.args = {
-	heading: "Error 404: Page not found",
-	description: [
-		"This page isn't available. Try checking the URL or visit a different page.",
-	],
+	isHorizontal: false
 };
 
-/**
- * An accent color class can be used on elements of the illustration SVG.
- */
-export const AccentColor = Template.bind({});
-AccentColor.tags = ["!dev"];
-AccentColor.args = {
-	heading: "Drag and drop your file",
-	description: [
-		() => {
-			return html`${Link({ url: "#", text: "Select a file" })} from your computer.`;
-		},
-	],
-	useAccentColor: true,
+
+export const Horizontal = Template.bind({});
+Horizontal.tags = ["!dev"];
+Horizontal.args = {
+	isHorizontal: true
 };
