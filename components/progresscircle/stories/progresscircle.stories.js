@@ -1,4 +1,3 @@
-import { html } from "lit";
 
 import { Template } from "./template";
 
@@ -34,7 +33,7 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Advanced",
 
 			},
 			options: ["white", "black"],
@@ -66,20 +65,5 @@ export default {
 	},
 };
 
-export const ProgressCircleGroup = (args) => html`
-	${window.isChromatic() ? html`
-		${Template(args)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-	` : Template(args)}
-`;
-
-export const Default = ProgressCircleGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
-
-export const StaticWhite = ProgressCircleGroup.bind({});
-StaticWhite.args = {
-	staticColor: "white",
-};
