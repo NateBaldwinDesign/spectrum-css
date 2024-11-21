@@ -89,8 +89,8 @@ export default {
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 142,
-		popoverWidth: 89,
+		popoverHeight: 158,
+		popoverWidth: 105,
 	},
 	parameters: {
 		layout: "centered",
@@ -127,7 +127,7 @@ Default.args = {
 			items: [
 				{
 					iconName: "Edit",
-					label: "Edit",
+					label: "Edit and editing",
 				},
 				{
 					iconName: "Copy",
