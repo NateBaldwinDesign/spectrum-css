@@ -1,5 +1,4 @@
-
-import { Template } from "./template";
+import { ProgressCircleGroup, Template } from "./template.js";
 
 /**
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
@@ -34,7 +33,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
-
 			},
 			options: ["white", "black"],
 			control: "select",
@@ -65,5 +63,49 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
+
+export const StaticWhiteDeterminate = Template.bind({});
+StaticWhiteDeterminate.tags = ["!dev"];
+StaticWhiteDeterminate.storyName = "Static white, default";
+StaticWhiteDeterminate.args = {
+	staticColor: "white",
+	isIndeterminate: false,
+};
+StaticWhiteDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteIndeterminate = Template.bind({});
+StaticWhiteIndeterminate.tags = ["!dev"];
+StaticWhiteIndeterminate.storyName = "Static white, indeterminate";
+StaticWhiteIndeterminate.args = {
+	staticColor: "white",
+	isIndeterminate: true,
+};
+StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Template.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Template.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};

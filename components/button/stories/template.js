@@ -9,7 +9,7 @@ import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as InfieldProgresscircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -75,13 +75,12 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPending, () => ProgressCircle({
+      ${when(isPending, () => InfieldProgresscircle({
         ...globals,
         size: "s",
         testId: "progress-circle",
         staticColor,
         isIndeterminate: true,
-        isInField: true
       }))}
     </button>
   `;
