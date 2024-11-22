@@ -248,7 +248,7 @@
 
 	position: relative;
 
-	min-inline-size: var(--mod-actionbutton-min-width, calc((var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-border-width)) * 2 + var(--spectrum-actionbutton-icon-size)));
+	min-inline-size: var(--mod-actionbutton-min-width, calc(var(--spectrum-actionbutton-edge-to-visual-only) * 2 + var(--spectrum-actionbutton-icon-size)));
 	block-size: var(--spectrum-actionbutton-height);
 
 	border-radius: var(--spectrum-actionbutton-border-radius);
